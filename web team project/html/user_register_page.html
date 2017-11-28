@@ -10,7 +10,43 @@
   <body>
     <header>    </header>
     <article id="register_background">
-      
+      <div class="title">Register</div>
+      <form action=".\user_register_page.html" method="post">
+        <div id="registerDiv">
+          <div id="info">
+            <input type="text" name="id" placeholder="ID">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="passwordConfirm" placeholder="Password Confirm">
+            <input type="text" name="name" placeholder="Name">
+            <input type="tel" name="phoneNumber" placeholder="Phone Number">
+            <input type="email" name="email" placeholder="E-mail">
+            <select name="school">
+              <option value="" selected disabled>School</option>
+              <option value="Chung-Ang">Chung-Ang</option>
+            </select>
+            <select name="department">
+              <option value="" selected disabled>Department</option>
+              <option value="Human-ICT">Human-ICT</option>
+            </select>
+            <select name="major">
+              <option value="" selected disabled>Major</option>
+              <option value="CSE">CSE</option>
+            </select>
+            <input type="text" name="studentNumber" placeholder="Student Number">
+          </div>
+          <div id="account">
+            <select name="bank">
+              <option value="" selected disabled>Bank</option>
+              <option value="우리은행">우리은행</option>
+            </select>
+            <input type="text" name="studentNumber" placeholder="Acoount Number">
+          </div>
+        </div>
+        <div>
+          <button type="button" id="idConfirmBtn"> Confirm </button>
+          <button type="submit" id="registerBtn"> Register </button>
+        </div>
+      </form>
     </article>
   </body>
 </html>
