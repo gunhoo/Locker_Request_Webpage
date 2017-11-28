@@ -3,7 +3,6 @@ a:visited{
   text-decoration:none;
 }
 a {
-  color:black;
   text-decoration: none;
 }
 body {
@@ -67,4 +66,10 @@ article {
 }
 article h1{
   margin-bottom: 40px;
+}
+.selector {
+    width: 150px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }

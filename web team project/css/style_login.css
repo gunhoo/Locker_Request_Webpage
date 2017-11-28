@@ -1,0 +1,79 @@
+body {
+  font-size: 15px;
+  background-color: lightgray;
+}
+header{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #01579B;  /*개발자 모드*/
+}
+article {
+  margin-left: 15rem;
+}
+.title {
+  width: 130px;
+
+  padding: 3px;
+  margin-top: 80px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color: #01579B;
+}
+#loginDiv {
+  width: 315px;
+  height: 100px;
+  border: 1px solid;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+#info input {
+    width: 200px;
+    padding: 6px;
+    margin-bottom: 3px;
+}
+#findBtn {
+  position: relative;
+  bottom: 18.7px;
+  height: 27px;
+
+  width: 216px;
+  padding: 3px;
+}
+#loginBtn {
+  position: relative;
+  bottom: 70px;
+
+  width: 90px;
+  height: 67px;
+  font-size: 15px;
+  padding: 5px;
+}
+#adminLoginBtn {
+    position: relative;
+    left:221px;
+    bottom: 65px;
+
+    width: 90px;
+    height: 27px;
+    font-size: 13px;
+    padding: 3px;
+}
+#register {
+    width: 321px;
+    height: 30px;
+    border: 1px solid;
+    background-color: white;
+    padding: 7px;
+}
+.registerBtn {
+    width: 151px;
+    margin-left: 4px;
+    padding: 5px;
+}
