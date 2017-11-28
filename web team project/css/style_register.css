@@ -1,0 +1,14 @@
+#register_background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: lightgray;
+}
+header{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #01579B;  /*개발자 모드*/
+}
