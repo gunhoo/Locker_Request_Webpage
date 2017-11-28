@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="..\css\style_user_main.css">
-  </head>
-  <body>
-    <header>
-      <nav class="menu">
-        <ul>
-          <li><a href=".\user_main_page.html">
-            Homepage</a></li>
-          <li id="clicked_menu">Locker Request</li>
-          <li>Manage My Locker</li>
-          <li>User Page</li>
-        </ul>
-      </nav>
-    </header>
-    <nav class="sub_menu">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="..\css\style_user_request.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
       <ul>
-        <li id="clicked_sub_menu">Locker Request</li>
+        <li><a href=".\user_main_page.html">
+          Homepage</a></li>
+        <li id="clicked_menu"><a href=".\style_user_request.html">
+          Locker Request</a></li>
+        <li>Manage My Locker</li>
+        <li>User Page</li>
       </ul>
     </nav>
-    <article>
-      <h1>Locker Information</h1>
-      How to use?
-      <form class="" action="index.html" method="post">
+  </header>
+  <nav class="sub_menu">
+    <ul>
+      <li id="clicked_sub_menu">Locker Request</li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Locker Information</h1>
+    <form action="index.html" method="post">
+      <select class="selector" name="building">
+        <option value="" selected>Building</option>
+        <option value="308">308관</option>
+        <option value="207">207관</option>
+        <option value="102">102관</option>
+      </select>
+      <select class="selector" name="location">
+        <option value="" selected>Location</option>
+        <option value="101F">101호 앞</option>
+        <option value="303B">303호 뒤</option>
+        <option value="B102">B102호</option>
+      </select>
+      <select class="selector" name="locker_number">
+        <option value="" selected>Locker Number</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" disabled>4 (reserved)</option>
+        <option value="5">5</option>
+      </select>
+      <ul id="info_list">
+        <li>Expiry Date</li>
+        <li>Rental Fee</li>
+        <li>Remittance Account</li>
+        <li class="info">2018-01-01</li>
+        <li class="info">5000 (원)</li>
+        <li class="info">우리 1002-443-492296</li>
+      </ul>
+      <input id="reqBtn" type="button" value="Request">
+    </form>
 
-      </form>
-      <table>
-        <tr>
-          <td>1</td>
-        </tr>
-      </table>
-    </article>
-  </body>
+  </article>
+</body>
+
 </html>
