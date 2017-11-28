@@ -85,19 +85,29 @@ article h1{
   margin: 5px;
   padding: 3px;
 }
-.info {
+.checkInfo {
   position:relative;
   left: 155px;
   bottom: 125px;
+  width: 200px;
+}
+.addInfo {
+  position:relative;
+  left: 155px;
+  bottom: 190px;
   width: 200px;
 }
 #bank_field {
   width: 70px;
   height: 21px;
 }
-#account_field {
+#check_account_field {
   left: 231px;
   bottom: 158px;
+}
+#add_account_field {
+  left: 231px;
+  bottom: 223px;
 }
 #reqBtn {
   position: relative;
