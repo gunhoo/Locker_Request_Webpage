@@ -9,13 +9,21 @@ a {
 body {
   font-size: 15px;
 }
-header{
+#user_header{
   border-bottom:1px solid;
 
   padding-top:27px;
   height: 54px;
 
   background-color: #01579B;  /*개발자 모드*/
+}
+#admin_header{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #4CAF50;  /*개발자 모드*/
 }
 .menu {
   margin-right: 40px;
@@ -35,7 +43,10 @@ header{
   font-weight: bold;
   background-color: white;
 }
-#clicked_menu {
+#admin_clicked_menu {
+  background-color: #C8E6C9;
+}
+#user_clicked_menu {
   background-color: #E1F5FE;
 }
 .sub_menu{
@@ -58,7 +69,10 @@ header{
 
   background-color: white;
 }
-#clicked_sub_menu {
+#admin_clicked_sub_menu {
+  background-color: #C8E6C9;
+}
+#user_clicked_sub_menu {
   background-color: #E1F5FE;
 }
 article {
