@@ -53,7 +53,7 @@ select{
   margin-bottom: 3px;
   margin-right: 5px;
 }
-.title {
+.userTitle {
   width: 130px;
 
   padding: 3px;
@@ -65,11 +65,31 @@ select{
   color:white;
   background-color: #01579B;
 }
-header{
+.adminTitle {
+  width: 130px;
+
+  padding: 3px;
+  margin-top: 80px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color: #4CAF50;
+}
+#userHeader{
   border-bottom:1px solid;
 
   padding-top:27px;
   height: 54px;
 
-  background-color: #01579B;  /*개발자 모드*/
+  background-color: #01579B;  /*유저 모드*/
+}
+#adminHeader{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #4CAF50;  /*개발자 모드*/
 }
