@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="..\css\style_manage_lockers.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href=".\admin_main_page.html">
+          Homepage</a></li>
+        <li id="clicked_menu"><a href=".\manage_lockers_page.html">
+          Manage Lockers</a></li>
+        <li><a href=".\manage_user_page.html">
+          Manage User</a></li>
+        <li><a href=".\administrator_page.html">
+          Administrator Page</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="sub_menu">
+    <ul>
+      <li>Add New Locker</li>
+      <li>Request List</li>
+      <li id="clicked_sub_menu">Check Locker Info</li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Locker Information</h1>
+    <form action="index.html" method="post">
+      <select class="selector" name="building">
+        <option value="" selected>Building</option>
+        <option value="308">308관</option>
+        <option value="207">207관</option>
+        <option value="102">102관</option>
+      </select>
+      <select class="selector" name="location">
+        <option value="" selected>Location</option>
+        <option value="101F">101호 앞</option>
+        <option value="303B">303호 뒤</option>
+        <option value="B102">B102호</option>
+      </select>
+      <select class="selector" name="locker_number">
+        <option value="" selected>Locker Number</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" disabled>4 (reserved)</option>
+        <option value="5">5</option>
+      </select>
+      <ul id="info_list">
+        <li>Number of Locker</li>
+        <li>Expiry Date</li>
+        <li>Rental Fee</li>
+        <li>Remittance Account</li>
+        <li class="info">
+          <select name="row">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+          </select> x
+          <select name="col">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+          </select>
+        </li>
+        <li><input class="info" type="text" name="expiry_date" value="2010-11-01" placeholder="(일)"></li>
+        <li><input class="info" type="text" name="rental_fee" value="5000원" placeholder="(원)"></li>
+        <li>
+          <select class="info" id="bank_field" name="bank">
+            <option value="우리">우리</option>
+            <option value="카카오" selected>카카오</option>
+            <option value="신한">신한</option>
+          </select>
+        </li>
+        <li><input class="info" id="account_field" type="text" name="account" value="1002-443-492296"></li>
+      </ul>
+      <input id="reqBtn" type="button" value="Confirm">
+    </form>
+  </article>
+</body>
+
+</html>
