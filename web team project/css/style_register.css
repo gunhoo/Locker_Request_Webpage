@@ -1,14 +1,95 @@
+article {
+  margin-left: 15rem;
+}
+body {
+  font-size: 15px;
+  background-color: lightgray;
+}
 #register_background {
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: lightgray;
 }
-header{
+#registerDiv {
+  width: 400px;
+  height: 350px;
+  border: 1px solid;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+#info input {
+    width: 200px;
+    padding: 6px;
+    margin-bottom: 3px;
+    margin-right: 300px;
+}
+#idConfirmBtn {
+  position: relative;
+  bottom: 365px;
+  left: 250px;
+  height: 30px;
+  width: 70px;
+  padding: 3px;
+}
+#registerBtn {
+  position: relative;
+  bottom: 50px;
+  height: 30px;
+  left: 20px;
+  width: 216px;
+  padding: 3px;
+}
+#account input{
+  display: inline;
+  width: 200px;
+  padding: 6px;
+  margin-bottom: 3px;
+}
+select{
+  width: 120px;
+  padding: 6px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+.userTitle {
+  width: 130px;
+
+  padding: 3px;
+  margin-top: 80px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color: #01579B;
+}
+.adminTitle {
+  width: 130px;
+
+  padding: 3px;
+  margin-top: 80px;
+
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color: #4CAF50;
+}
+#userHeader{
   border-bottom:1px solid;
 
   padding-top:27px;
   height: 54px;
 
-  background-color: #01579B;  /*개발자 모드*/
+  background-color: #01579B;  /*유저 모드*/
+}
+#adminHeader{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #4CAF50;  /*개발자 모드*/
 }
