@@ -6,6 +6,9 @@ a {
   color:black;
   text-decoration: none;
 }
+div {
+  display: inline;
+}
 body {
   font-size: 15px;
 }
@@ -22,7 +25,7 @@ header{
 
   float: right;
 }
-.menu ul {
+ul {
   list-style: none;
 }
 .menu ul li {
@@ -67,4 +70,32 @@ article {
 }
 article h1{
   margin-bottom: 40px;
+}
+.selector {
+    width: 150px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#info_list {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#info_list li {
+  margin: 5px;
+  padding: 3px;
+}
+.info {
+  position:relative;
+  left: 155px;
+  bottom: 98px;
+  border: 1px solid;
+  width: 200px;
+}
+#reqBtn {
+  position: relative;
+  left: 378px;
+  bottom: 150px;
+  padding: 8px;
+  font-size: 15px;
 }

@@ -6,6 +6,9 @@ a {
   color:black;
   text-decoration: none;
 }
+div {
+  display: inline;
+}
 body {
   font-size: 15px;
 }
@@ -15,14 +18,14 @@ header{
   padding-top:27px;
   height: 54px;
 
-  background-color: #01579B;  /*개발자 모드*/
+  background-color: #4CAF50;  /*개발자 모드*/
 }
 .menu {
   margin-right: 40px;
 
   float: right;
 }
-.menu ul {
+ul {
   list-style: none;
 }
 .menu ul li {
@@ -36,7 +39,7 @@ header{
   background-color: white;
 }
 #clicked_menu {
-  background-color: #E1F5FE;
+  background-color: #C8E6C9;
 }
 .sub_menu{
   border-right: 1px solid;
@@ -59,7 +62,7 @@ header{
   background-color: white;
 }
 #clicked_sub_menu {
-  background-color: #E1F5FE;
+  background-color: #C8E6C9;
 }
 article {
   margin-left: 250px;
@@ -67,4 +70,39 @@ article {
 }
 article h1{
   margin-bottom: 40px;
+}
+.selector {
+    width: 150px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#info_list {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#info_list li {
+  margin: 5px;
+  padding: 3px;
+}
+.info {
+  position:relative;
+  left: 155px;
+  bottom: 125px;
+  width: 200px;
+}
+#bank_field {
+  width: 70px;
+  height: 21px;
+}
+#account_field {
+  left: 231px;
+  bottom: 158px;
+}
+#reqBtn {
+  position: relative;
+  left: 367px;
+  bottom: 167px;
+  padding: 8px;
+  font-size: 15px;
 }
