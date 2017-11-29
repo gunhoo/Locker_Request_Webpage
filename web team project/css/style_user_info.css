@@ -1,0 +1,112 @@
+a:visited{
+  color:black;
+  text-decoration:none;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+div {
+  display: inline;
+}
+body {
+  font-size: 15px;
+}
+header{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #01579B;  /*개발자 모드*/
+}
+.menu {
+  margin-right: 40px;
+
+  float: right;
+}
+ul {
+  list-style: none;
+}
+.menu ul li {
+  border: 1px solid;
+
+  padding: 9px;
+
+  float: left;
+
+  font-weight: bold;
+  background-color: white;
+}
+#clicked_menu {
+  background-color: #E1F5FE;
+}
+.sub_menu{
+  border-right: 1px solid;
+
+  position: absolute;
+  width:200px;
+  height: 100%;
+
+  background-color: lightgray;
+}
+.sub_menu ul {
+  margin-top: 40px;
+  list-style: none;
+}
+.sub_menu ul li {
+  border: 1px solid;
+
+  padding: 8px;
+
+  background-color: white;
+}
+#clicked_sub_menu {
+  background-color: #E1F5FE;
+}
+article {
+  margin-left: 250px;
+  margin-top: 40px;
+}
+article h1{
+  margin-bottom: 40px;
+}
+.selector {
+    width: 150px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#info_list {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#info_list li {
+  margin: 5px;
+  padding: 3px;
+  width: 200px;
+
+}
+.checkInfo {
+  position:relative;
+  left: 155px;
+  bottom: 240px;
+  width: 200px;
+}
+.info {
+  position:relative;
+  left: 155px;
+  bottom: 98px;
+  border: 1px solid;
+  width: 200px;
+}
+
+#reqBtn{
+  height: 30px;
+  margin-left: 470px;
+}
+
+#withBtn{
+  height: 30px;
+  margin-left: 200px;
+}
