@@ -10,6 +10,9 @@ please contact us by using google docs: https://goo.gl/forms/UckI03BgP1QqH0Io2
 Then we will respond to you ASAP.
 
 ----- developers -----
+
 Kim Chan-il : yh0438
+
 Park Gun-hoo : gunhoo
+
 Choi Jun-young : cupjoo
