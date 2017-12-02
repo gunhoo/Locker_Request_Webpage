@@ -1,0 +1,146 @@
+a:visited{
+  color:black;
+  text-decoration:none;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+div {
+  display: inline;
+}
+body {
+  font-size: 15px;
+}
+header{
+  border-bottom:1px solid;
+
+  padding-top:27px;
+  height: 54px;
+
+  background-color: #4CAF50;  /*개발자 모드*/
+}
+.menu {
+  margin-right: 40px;
+
+  float: right;
+}
+ul {
+  list-style: none;
+}
+.menu ul li {
+  border: 1px solid;
+
+  padding: 9px;
+
+  float: left;
+
+  font-weight: bold;
+  background-color: white;
+}
+#clicked_menu {
+  background-color: #C8E6C9;
+}
+.sub_menu{
+  border-right: 1px solid;
+
+  position: absolute;
+  width:200px;
+  height: 100%;
+
+  background-color: lightgray;
+}
+.sub_menu ul {
+  margin-top: 40px;
+  list-style: none;
+}
+.sub_menu ul li {
+  border: 1px solid;
+
+  padding: 8px;
+
+  background-color: white;
+}
+#clicked_sub_menu {
+  background-color: #C8E6C9;
+}
+article {
+  margin-left: 250px;
+  margin-top: 40px;
+}
+article h1{
+  margin-bottom: 40px;
+}
+.selector {
+    width: 150px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+#find_student {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#find_student li {
+  margin: 5px;
+  padding: 3px;
+}
+#finded_student_info {
+  margin-top: 30px;
+  padding-left: 0;
+}
+#finded_student_info li {
+  margin: 5px;
+  padding: 3px;
+}
+.checkInfo {
+  position:relative;
+  left: 155px;
+  bottom: 125px;
+  width: 200px;
+}
+.addInfo {
+  position:relative;
+  left: 155px;
+  bottom: 190px;
+  width: 200px;
+}
+#bank_field {
+  width: 70px;
+  height: 21px;
+}
+#check_account_field {
+  left: 231px;
+  bottom: 158px;
+}
+#add_account_field {
+  left: 231px;
+  bottom: 223px;
+}
+
+/*
+#findBtn {
+  position: relative;
+  left: 367px;
+  bottom: 167px;
+  padding: 8px;
+  font-size: 15px;
+}
+
+#activateBtn {
+  position: relative;
+  left: 367px;
+  bottom: 167px;
+  padding: 8px;
+  font-size: 15px;
+}
+
+
+#deactivateBtn {
+  position: relative;
+  left: 367px;
+  bottom: 167px;
+  padding: 8px;
+  font-size: 15px;
+}
+*/
