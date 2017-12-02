@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="..\css\style_user_info.css">
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <ul>
+      <li><a href=".\user_main_page.html">
+        Homepage</a></li>
+      <li ><a href=".\style_user_request.html">
+        Locker Request</a></li>
+      <li>Manage My Locker</li>
+      <li id="clicked_menu">User Page</li>
+      </ul>
+    </nav>
+  </header>
+  <nav class="sub_menu">
+    <ul>
+      <li>Manage Info</li>
+
+
+    </ul>
+  </nav>
+  <article>
+    <h1>My Locker Info</h1>
+    <form action="index.html" method="post">
+      <ul id="info_list">
+
+      <li><input class="info_list" type="text" name="current_password"  placeholder="Current Password"></li>
+      <li><input class="info_list" type="text" name="password"  placeholder="Password"></li>
+      <li><input class="info_list" type="text" name="password_confirm"  placeholder="Password Confirm"></li>
+      <li><input class="info_list" type="text" name="name"  value="Name"></li>
+      <li><input class="info_list" type="text" name="ph_number" placeholder="Phone Number"></li>
+      <li><input class="info_list" type="text" name="email" placeholder="E-mail"></li>
+      <li><input class="info_list" type="text" name="school"  value="School"></li>
+      <li><input class="info_list" type="text" name="department"  value="Department"></li>
+      <li><input class="info_list" type="text" name="major"  value="Major"></li>
+      <li>
+               <select class="addInfo" id="bank_field" name="bank">
+                 <option value="우리">우리</option>
+                 <option value="카카오" selected>카카오</option>
+                 <option value="신한">신한</option>
+               </select>
+             </li>
+             <li><input class="addInfo" id="add_account_field" type="text" name="account" placeholder="Account Number(Optional)"></li>
+
+</ul>
+<input id="reqBtn" type="button" value="Confirm">
+
+<h1>Withdrawal</h1>
+<form action="index.html" method="post">
+  <ul id="info_list">
+    <li><input class="info_list" type="text" name="withdrawal_password"  placeholder="Password"></li>
+  </ul>
+  <input id="withBtn" type="button" value="Confirm">
+
+
+
+
+    </form>
+  </article>
+</body>
+
+</html>
