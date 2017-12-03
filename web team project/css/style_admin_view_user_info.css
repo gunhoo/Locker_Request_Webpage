@@ -111,15 +111,8 @@ article h1{
 }
 #result {
   position: relative;
-  bottom: 350px;
+  bottom: 180px;
   padding: 10px;
-}
-#deAct {
-  position: relative;
-  left:178px;
-  width: 220px;
-  padding: 8px;
-  bottom: 350px;
 }
 #search {
   position: relative;
