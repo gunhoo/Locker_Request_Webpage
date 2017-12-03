@@ -1,5 +1,7 @@
 <?php
-  if(isset($_GET['result']){
+  include "dbLogin.php";
+
+  if(isset($_GET['result'])){
     if($_GET['result'] == 'wrong'){
       echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
     } else if ($_GET['result'] == 'success'){
@@ -37,8 +39,10 @@
       </div>
     </form>
     <div id="register">
-      <form "./login_page.html" method="post">
+      <form action="./user_register_page.php" method="post">
         <input class="registerBtn" type="submit" value="User Register">
+      </form>
+      <form action="./admin_register_page.php" method="post">
         <input class="registerBtn" type="submit" value="Admin Register">
       </form>
     </div>

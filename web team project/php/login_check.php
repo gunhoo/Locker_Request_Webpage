@@ -4,7 +4,7 @@
   if(isset($_POST['action'])){
     if($_POST['action'] == "Find ID/PW"){
 
-    } else {
+    } else if($_POST['id'] != "" && $_POST['password'] != ""){
       $id = $_POST['id'];
       $password = $_POST['password'];
       if ($_POST['action'] == "User Login"){
@@ -26,6 +26,8 @@
           header('Location: ./login_page.php?result=wrong');
         }
       }
+    } else {
+      header('Location: ./login_page.php?result=wrong');
     }
   }
 ?>
