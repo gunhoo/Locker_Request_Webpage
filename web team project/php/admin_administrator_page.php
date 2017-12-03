@@ -1,5 +1,18 @@
 <?php
-    include "adminDBLogin.php";
+    include "dbLogin.php";
+
+    if(isset($_POST['action']) && ($_POST['action'] == "Confirm")) {
+      $password = $_POST['admin_password'];
+      $name = $_POST['name'];
+      $phone_number = $_POST['admin_phnum'];
+      $email = $_POST['admin_email'];
+
+      $sql = "UPDATE admin
+      SET name='$name', phone_number='$phone_number', email='$email', password='$password'
+      where id='$myAdmin_id';";
+      $modifyResult = $mysqli->query($sql);
+      echo '<script>alert("정보가 수정되었습니다.")</script>';
+    }
 ?>
 
 
@@ -14,7 +27,7 @@
   <header>
     <nav class="menu">
       <ul>
-        <li><a href=".\admin_homepage.php">
+        <li><a href=".\admin_main_page.php">
           Homepage</a></li>
         <li ><a href=".\admin_manage_lockers.php">
           Manage Lockers</a></li>
@@ -27,37 +40,23 @@
   </header>
   <nav class="sub_menu">
     <ul>
-      <li>Administrator Locker Info</li>
+      <li>Administrator Info</li>
     </ul>
   </nav>
   <article>
-    <h1>Admin Info</h1>
-    <form action=".\admin_homepage.php" method="post">
+    <h1>Administrator Info</h1>
+    <form action=".\admin_administrator_page.php" method="post">
       <ul id="admin_info">
-          <li> <input class = "admin" id ="admin_password" type="password"
-             name="admin_password" placeholder="Password"></li>
-          <li> <input class = "admin" id ="admin_password_confirm" type="password"
-             name="admin_password_confirm" placeholder="Password Confirm"></li>
-          <li> <input class = "admin" id ="admin_name" type="text"
-             name="admin_name" placeholder="Name"></li>
-          <li> <input class = "admin" id ="admin_phnum" type="text"
-             name="admin_phnum" placeholder="Phone Number"></li>
-          <li> <input class = "admin" id ="admin_email" type="text"
-             name="admin_email" placeholder="E-mail"></li>
-          <li> <input class = "admin" id ="admin_school" type="text"
-             name="admin_school" placeholder="School"></li>
-          <li> <input class = "admin" id ="admin_department" type="text"
-             name="admin_department" placeholder="Department"></li>
-          <li> <input class = "admin" id ="admin_major" type="text"
-            name="admin_major" placeholder="Major"></li>
+          <li><input class = "admin" type="password" name="admin_password" placeholder="Password"></li>
+          <?php
+            if($result = mysqli_fetch_assoc($admin)){
+              echo '<li><input class = "admin" type="text" name="admin_name" placeholder="Name" value="'.$result['name'].'"></li>'.'\n';
+              echo '<li><input class = "admin" type="text" name="admin_phnum" placeholder="Phone Number" value="'.$result['phone_number'].'"></li>'.'\n';
+              echo '<li><input class = "admin" type="text" name="admin_email" placeholder="E-mail" value="'.$result['email'].'"></li>'.'\n';
+            }
+           ?>
       </ul>
-      <input id="reqBtn" type="button" value="Confirm">
-
-      <h1>withdrawal</h1>
-      <form action="index.html" method="post">
-      <input class = "admin" id ="admin_password" type="password"
-         name="admin_password" placeholder="Password">
-      <input id="reqBtn" type="button" value="Confirm">
+      <input id="reqBtn" type="button" name="action" value="Confirm">
     </form>
   </article>
 </body>
