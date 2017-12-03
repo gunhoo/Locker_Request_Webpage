@@ -1,6 +1,5 @@
-
 <?php
-  if(isset($_GET['result']){
+  if(isset($_GET['result'])){
     if($_GET['result'] == 'wrong'){
       echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
     }

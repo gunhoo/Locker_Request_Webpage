@@ -1,6 +1,10 @@
 <?php
     include "dbLogin.php";
 
+    $myAdmin_id = $_POST['myAdmin_id'];
+    $sql2 = "SELECT * FROM admin WHERE id=$myAdmin_id";
+  	$admin = $mysqli->query($sql2);
+
     if(isset($_POST['action']) && ($_POST['action'] == "Confirm")) {
       $password = $_POST['admin_password'];
       $name = $_POST['name'];

@@ -15,6 +15,9 @@
         $sql2 = "SELECT * FROM user where student_number='$student_number'";
         $num_result = $mysqli->query($sql2);
         if(($id_result === FALSE) && ($num_result === FALSE) && ($password == $confirm)){
+          $sql = "INSERT INTO user (name, phoneNumber, email, notes)";
+          $sql = $sql."values('$name','$phoneNumber','$email','$notes')";
+          $result = $mysqli->query($sql);
 
           header('Location: ./login_page.php?result=success');
         } else {
