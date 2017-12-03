@@ -9,10 +9,10 @@
     <header id="admin_header">
       <nav class="menu">
         <ul>
-          <li id="admin_clicked_menu"><a href=".\admin_homepage_page.php">Homepage</a></li>
-          <li><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
-          <li><a href=".\admin_manage_user_page.php">Manage User</a></li>
-          <li><a href=".\admin_administrator_page.html">Administrator Page</a></li>
+          <li id="clicked_menu"><a href=".\admin_home_page.php">Homepage</a></li>
+          <li ><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
+          <li ><a href=".\admin_manage_user_page.php">Manage User</a></li>
+          <li ><a href=".\admin_administrator_page.php">Administrator Page</a></li>
         </ul>
       </nav>
     </header>

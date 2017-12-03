@@ -11,13 +11,13 @@
   <header>
     <nav class="menu">
       <ul>
-      <li><a href=".\user_main_page.php">
+      <li><a href=".\user_home_page.php">
         Homepage</a></li>
       <li ><a href=".\user_locker_request_page.php">
         Locker Request</a></li>
       <li id="clicked_menu"><a href=".\user_manage_my_locker_page.php">
         Manage My Locker</a></li>
-      <li>User Page</li>
+      <li><a href=".\user_info_page.php">User Page</li>
       </ul>
     </nav>
   </header>
