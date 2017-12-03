@@ -47,31 +47,33 @@
           <button action=".\admin_view_user_info_page.php" id="search" type="submit">Search</button>
         </form>
       </div>
-      <h1>Result</h1>
-      <div id="find">
-        <form>
-          <ul id="info_list">
-            <li>Name</li>
-            <li>ID</li>
-            <li>Phone Number</li>
-            <li>E-mail</li>
-          </ul>
-        </form>
-      </div>
-      <div id="result">
-        <form>
-          <ul id="reult">
-            <?php
-              if($result = mysqli_fetch_assoc($user)){
-                echo '<li><input class="info_list" type="text" name="name" value="'.$result['name'].'"></li>'."\n";
-                echo '<li><input class="info_list" type="text" name="id"  value="'.$result['id'].'"></li>'."\n";
-                echo '<li><input class="info_list" type="tel" name="phoneNumber" value="'.$result['phone_number'].'"></li>'."\n";
-                echo '<li><input class="info_list" type="email" name="email"  value="'.$result['email'].'"></li>'."\n";
-              }
-            ?>
-          </ul>
-        </form>
-      </div>
+			<?php
+				if($result = mysqli_fetch_assoc($user)){
+	      echo '<h1>Result</h1>
+	      <div id="find">
+	        <form>
+	          <ul id="info_list">
+	            <li>Name</li>
+	            <li>ID</li>
+	            <li>Phone Number</li>
+	            <li>E-mail</li>
+	          </ul>
+	        </form>
+	      </div>
+	      <div id="result">
+	        <form>
+	          <ul id="reult">';
+	            echo '<li><input class="info_list" type="text" name="name" value="'.$result['name'].'"></li>'."\n";
+	            echo '<li><input class="info_list" type="text" name="id"  value="'.$result['id'].'"></li>'."\n";
+	            echo '<li><input class="info_list" type="tel" name="phoneNumber" value="'.$result['phone_number'].'"></li>'."\n";
+	            echo '<li><input class="info_list" type="email" name="email"  value="'.$result['email'].'"></li>'."\n";
+	          echo '</ul>
+	        </form>
+	      </div>';
+			}else{
+				echo '<h1>Result</h1>';
+			}
+			?>
     </article>
   </body>
 </html>
