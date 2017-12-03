@@ -41,6 +41,24 @@ ul {
 #clicked_menu {
   background-color: #E1F5FE;
 }
+#result {
+  margin: 5px;
+  padding: 3px;
+  width: 200px;
+  height: 30px;
+}
+#show input {
+    width: 200px;
+    padding: 6px;
+    margin-bottom: 3px;
+    margin-left: 150px;
+}
+#show{
+    width: 200px;
+    padding: 6px;
+    margin-bottom: 300px;
+    margin-left: 100px;
+}
 .sub_menu{
   border-right: 1px solid;
 
