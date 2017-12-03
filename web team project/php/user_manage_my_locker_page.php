@@ -17,7 +17,7 @@
         Locker Request</a></li>
       <li id="clicked_menu"><a href=".\user_manage_my_locker_page.php">
         Manage My Locker</a></li>
-      <li><a href=".\user_info_page.php">User Page</li>
+      <li><a href=".\user_info_page.php">User Page</a></li>
       </ul>
     </nav>
   </header>
