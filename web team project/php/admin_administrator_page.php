@@ -1,7 +1,5 @@
 <?php
-    include "adminDBLogin.php";
-
-
+    include "dbLogin.php";
 
     if(isset($_POST['action']) && ($_POST['action'] == "Confirm")) {
       $password = $_POST['admin_password'];

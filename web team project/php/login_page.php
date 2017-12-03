@@ -1,6 +1,10 @@
 <?php
-  if(isset($_GET['result']) && $_GET['result'] == 'wrong'){
-    echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
+  if(isset($_GET['result']){
+    if($_GET['result'] == 'wrong'){
+      echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
+    } else if ($_GET['result'] == 'success'){
+      echo '<script>alert("회원가입이 완료되었습다.")</script>';
+    }
   }
  ?>
 

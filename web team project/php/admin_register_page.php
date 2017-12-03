@@ -1,3 +1,11 @@
+
+<?php
+  if(isset($_GET['result'])){
+    if($_GET['result'] == 'wrong'){
+      echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
+    }
+  }
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,12 +24,12 @@
           <div id="info">
             <input type="text" name="id" placeholder="ID">
             <input type="password" name="password" placeholder="Password">
-            <input type="password" name="passwordConfirm" placeholder="Password Confirm">
+            <input type="password" name="password_confirm" placeholder="Password Confirm">
             <input type="text" name="name" placeholder="Name">
-            <input type="tel" name="phoneNumber" placeholder="Phone Number">
+            <input type="tel" name="phone_number" placeholder="Phone Number">
             <input type="email" name="email" placeholder="E-mail">
             </select>
-            <input type="text" name="studentNumber" placeholder="Student Number">
+            <input type="text" name="student_number" placeholder="Student Number">
             <div id="account">
               <input type="text" name="account_number" placeholder="Acoount Number">
             </div>
