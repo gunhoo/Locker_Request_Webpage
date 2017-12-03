@@ -9,7 +9,7 @@
 	$user = $mysqli->query($sql);
 	if($user === FALSE) {
 		$sql = "CREATE TABLE user (
-			id VARCHAR(30) NOT NULL,
+			id VARCHAR(30) AUTO_INCREMENT NOT NULL,
 			password VARCHAR(30) NOT NULL,
 			name VARCHAR(15) NOT NULL,
 			phone_number VARCHAR(15) NOT NULL,
@@ -24,7 +24,7 @@
 	$admin = $mysqli->query($sql2);
 	if($admin === FALSE) {
 		$sql2 = "CREATE TABLE admin (
-			id VARCHAR(30) NOT NULL,
+			id VARCHAR(30) AUTO_INCREMENT NOT NULL,
 			password VARCHAR(30) NOT NULL,
 			name VARCHAR(15) NOT NULL,
 			phone_number VARCHAR(15) NOT NULL,
