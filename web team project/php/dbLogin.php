@@ -32,8 +32,8 @@
 			phone_number VARCHAR(15) NOT NULL,
 			email VARCHAR(30) NOT NULL,
 			student_number VARCHAR(12) NOT NULL,
-			account VARCHAR(20),
-			PRIMARY KEY (id)
+			account VARCHAR(30),
+			PRIMARY KEY (student_number)
 		) ENGINE = InnoDB DEFAULT CHARSET=utf8";
 		$admin = $mysqli->query($sql2);
 	}
