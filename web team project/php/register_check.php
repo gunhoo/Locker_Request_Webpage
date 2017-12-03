@@ -2,8 +2,8 @@
   if(isset($_POST['action'])){
     if($_POST['action'] == "user register"){
 
-    } else if (){
-      
+    } else if ($_POST['action'] == "admin register"){
+
     }
 
 
