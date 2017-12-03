@@ -6,7 +6,7 @@
 	$mysqli = new mysqli($host, $user, $pw, $dbName);
 	$myAdmin_id = $_POST['myAdmin_id'];
 
-	$sql = "SELECT * FROM user where id='$myUser_id'";
+	$sql = "SELECT * FROM user";
 	$user = $mysqli->query($sql);
 
 	if($user === FALSE) {
@@ -26,7 +26,7 @@
 		) ENGINE = InnoDB DEFAULT CHARSET=utf8";
     $user = $mysqli->query($sql);
 	}
-	$sql2 = "SELECT * FROM admin";
+	$sql2 = "SELECT * FROM admin where id='$myAdmin_id'";
 	$admin = $mysqli->query($sql2);
 
 	if($admin === FALSE) {
