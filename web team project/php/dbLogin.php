@@ -31,6 +31,7 @@
 			name VARCHAR(15) NOT NULL,
 			phone_number VARCHAR(15) NOT NULL,
 			email VARCHAR(30) NOT NULL,
+			student_number VARCHAR(12) NOT NULL,
 			account VARCHAR(20),
 			PRIMARY KEY (id)
 		) ENGINE = InnoDB DEFAULT CHARSET=utf8";
