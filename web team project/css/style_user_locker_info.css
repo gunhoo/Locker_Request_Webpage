@@ -42,10 +42,14 @@ ul {
   background-color: #E1F5FE;
 }
 #result {
-  margin: 5px;
+  position: relative;
+  bottom: 20px;
   padding: 3px;
   width: 200px;
   height: 30px;
+}
+#result li {
+  padding-bottom: 13px;
 }
 #show input {
     width: 200px;
@@ -54,10 +58,11 @@ ul {
     margin-left: 150px;
 }
 #show{
+    position: relative;
     width: 200px;
     padding: 6px;
-    margin-bottom: 300px;
-    margin-left: 100px;
+    bottom: 60px;
+    left: 10px;
 }
 .sub_menu{
   border-right: 1px solid;

@@ -36,9 +36,9 @@
   </nav>
   <article>
     <h1>My Locker Info</h1>
-		<div id="result">
+		<div>
 			<form>
-				<ul id="reult">
+				<ul id="result">
 					<li>State</li>
 					<li>Building</li>
 					<li>Location</li>
@@ -48,8 +48,10 @@
 					<li>Remittance Bank</li>
 					<li>Remittance Account</li>
 				</ul>
+			</form>
 		</div>
 		<div id="show">
+			<form>
 				<ul id="show">
 					<?php
 						if($result = mysqli_fetch_assoc($locker_number)){
