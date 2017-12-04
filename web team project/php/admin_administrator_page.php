@@ -27,7 +27,7 @@
   </header>
   <nav class="sub_menu">
     <ul>
-      <li>Administrator Locker Info</li>
+      <li>Administrator Info</li>
     </ul>
   </nav>
   <article>
@@ -44,12 +44,6 @@
              name="admin_phnum" placeholder="Phone Number"></li>
           <li> <input class = "admin" id ="admin_email" type="text"
              name="admin_email" placeholder="E-mail"></li>
-          <li> <input class = "admin" id ="admin_school" type="text"
-             name="admin_school" placeholder="School"></li>
-          <li> <input class = "admin" id ="admin_department" type="text"
-             name="admin_department" placeholder="Department"></li>
-          <li> <input class = "admin" id ="admin_major" type="text"
-            name="admin_major" placeholder="Major"></li>
       </ul>
       <input id="reqBtn" type="button" value="Confirm">
 
