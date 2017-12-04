@@ -24,13 +24,15 @@
       // User Register Page
       if($_POST['action'] == "user register"){
         $sql = "SELECT * FROM user where id='$id'";
-        $id_result = $mysqli->query($sql);
+        $id_result = $mysqli->query($sql);    // 일치하는 id 검색
+
         $sql2 = "SELECT * FROM user where student_number='$student_number'";
-        $num_result = $mysqli->query($sql2);
+        $num_result = $mysqli->query($sql2);  // 일치하는 학번 검색
+
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
-        } else if(($id_result === FALSE) && ($num_result === FALSE)){
+        } else if(($id_result == FALSE) && ($num_result == FALSE)){
           // @@@@@@@@@@@@@@@@@@@ 조건문 이상 result 값 확인해야 함
           $sql = "INSERT INTO user (id, password, name, phone_number, email, student_number)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number')";
@@ -44,9 +46,11 @@
       // Admin Register Page
       } else if($_POST['action'] == "admin register"){
         $sql = "SELECT * FROM admin where id='$id'";
-        $id_result = $mysqli->query($sql);
+        $id_result = $mysqli->query($sql);    // 일치하는 id 검색
+
         $sql2 = "SELECT * FROM admin where student_number='$student_number'";
-        $num_result = $mysqli->query($sql2);
+        $num_result = $mysqli->query($sql2);  // 일치하는 학번 검색
+
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
