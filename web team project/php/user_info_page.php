@@ -1,26 +1,26 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pw = 'cau1010';
-$dbName = 'mylocker';
-$mysqli = new mysqli($host, $user, $pw, $dbName);
+  $myUser_id = $_GET['myUser_id'];
+ ?>
+
+<?php
+  include "dbLogin.php";
 
   function userInfo(){
-  $sql1 = "UPDATE user SET password = ".$_GET['password']." WHERE id Like 'gunhoo0216'  ";
-  $sql2 = "UPDATE user SET name = ".$_GET['name']." WHERE id Like 'gunhoo0216'";
-  $sql3 = "UPDATE user SET phone_number = ".$_GET['ph_number']." WHERE id LIKE 'gunhoo0216'";
-  $sql4 = "UPDATE user SET email = ".$_GET['email']." WHERE id Like 'gunhoo0216'";
+    $sql1 = "UPDATE user SET password = ".$_GET['password']." WHERE id Like 'gunhoo0216'  ";
+    $sql2 = "UPDATE user SET name = ".$_GET['name']." WHERE id Like 'gunhoo0216'";
+    $sql3 = "UPDATE user SET phone_number = ".$_GET['ph_number']." WHERE id LIKE 'gunhoo0216'";
+    $sql4 = "UPDATE user SET email = ".$_GET['email']." WHERE id Like 'gunhoo0216'";
 
-  mysqli_query($mysqli, $sql1);
-  mysqli_query($mysqli, $sql2);
-  mysqli_query($mysqli, $sql3);
-  mysqli_query($mysqli, $sql4);
+    mysqli_query($mysqli, $sql1);
+    mysqli_query($mysqli, $sql2);
+    mysqli_query($mysqli, $sql3);
+    mysqli_query($mysqli, $sql4);
 
-}
+  }
 
-$sql = "SELECT* FROM user WHERE id Like 'gunhoo0216'";
-$result = mysqli_query($mysqli, $sql);
-$row = mysqli_fetch_assoc($result);
+  $sql = "SELECT* FROM user WHERE id Like 'gunhoo0216'";
+  $result = mysqli_query($mysqli, $sql);
+  $row = mysqli_fetch_assoc($result);
 ?>
 
 <head>
@@ -39,13 +39,13 @@ $row = mysqli_fetch_assoc($result);
   <header>
     <nav class="menu">
       <ul>
-        <li><a href=".\user_home_page.php">
+        <li><a href=".\user_homepage_page.php?myUser_id=<?=$myUser_id?>">
 	        Homepage</a></li>
-	      <li ><a href=".\user_locker_request_page.php">
+	      <li ><a href=".\user_locker_request_page.php?myUser_id=<?=$myUser_id?>">
 	        Locker Request</a></li>
-	      <li ><a href=".\user_locker_info_page.php">
+	      <li ><a href=".\user_locker_info_page.php?myUser_id=<?=$myUser_id?>">
 	        Manage My Locker</a></li>
-	      <li id="clicked_menu"><a href=".\user_info_page.php">User Page</a></li>
+	      <li id="clicked_menu"><a href=".\user_info_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
       </ul>
     </nav>
   </header>

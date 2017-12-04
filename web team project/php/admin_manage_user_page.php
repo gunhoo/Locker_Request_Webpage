@@ -1,9 +1,7 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$pw = 'cau1010';
-	$dbName = 'mylocker';
-	$mysqli = new mysqli($host, $user, $pw, $dbName);
+	include "dbLogin.php";
+	$myAdmin_id = $_GET['myAdmin_id'];
+
 	$sql = "SELECT * FROM user WHERE student_number LIKE ".$_GET['studentNumber'];
 	$user = $mysqli->query($sql);
 ?>
@@ -21,10 +19,10 @@
     <header>
       <nav class="menu">
         <ul>
-					<li><a href=".\admin_home_page.php">Homepage</a></li>
-					<li ><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
-					<li id="clicked_menu"><a href=".\admin_manage_user_page.php">Manage User</a></li>
-					<li ><a href=".\admin_administrator_page.php">Administrator Page</a></li>
+					<li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
+					<li ><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+					<li id="clicked_menu"><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
+					<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
         </ul>
       </nav>
     </header>

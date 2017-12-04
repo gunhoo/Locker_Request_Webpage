@@ -1,3 +1,7 @@
+<?php
+  $myUser_id = $_GET['myUser_id'];
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,14 +13,13 @@
     <header id="user_header">
       <nav class="menu">
         <ul>
-          <li id="user_clicked_menu"><a href=".\user_main_page.html">
-            Homepage</a></li>
-          <li><a href=".\locker_request_page.html">
-            Locker Request</a></li>
-          <li><a href=".\manage_my_locker_page.html">
-            Manage My Locker</a></li>
-          <li><a href=".\user_page.html">
-              User Page</a></li>
+          <li id="user_clicked_menu"><a href=".\user_homepage_page.php?myUser_id=<?=$myUser_id?>">
+  	        Homepage</a></li>
+  	      <li ><a href=".\user_locker_request_page.php?myUser_id=<?=$myUser_id?>">
+  	        Locker Request</a></li>
+  	      <li ><a href=".\user_locker_info_page.php?myUser_id=<?=$myUser_id?>">
+  	        Manage My Locker</a></li>
+  	      <li><a href=".\user_info_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
         </ul>
       </nav>
     </header>
