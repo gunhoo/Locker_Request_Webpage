@@ -72,9 +72,13 @@ article {
     background-color: white;
     padding: 7px;
 }
-.registerBtn {
-    width: 151px;
-    margin-left: 4px;
-    padding: 5px;
-    float: left;
+.registerBtn{
+  width: 151px;
+  margin-left: 4px;
+  padding: 5px;
+}
+#adminRegisterBtn {
+  position: relative;
+  left: 158px;
+  bottom: 29px;
 }

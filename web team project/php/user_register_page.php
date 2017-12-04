@@ -2,6 +2,12 @@
   if(isset($_GET['result'])){
     if($_GET['result'] == 'wrong'){
       echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
+    } else if ($_GET['result'] == 'exist'){
+      echo '<script>alert("이미 회원가입된 사용자입니다.")</script>';
+    } else if ($_GET['result'] == 'empty'){
+      echo '<script>alert("모든 정보를 입력해주세요.")</script>';
+    } else if ($_GET['result'] == 'diff'){
+      echo '<script>alert("비밀번호가 일치하지 않습니다.")</script>';
     }
   }
  ?>
@@ -32,6 +38,7 @@
         </div>
         <div>
           <button type="submit" id="registerBtn" name="action" value="user register"> Register </button>
+          <button type="button" id="cancelBtn" name="cancelBtn" onClick="location.href='login_page.php'">Cancel</button>
         </div>
       </form>
     </article>
