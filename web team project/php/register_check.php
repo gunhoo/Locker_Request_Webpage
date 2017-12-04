@@ -12,6 +12,7 @@
       $email = $_POST['email'];
       $student_number = $_POSt['student_number'];
 
+      // User Register Page
       if($_POST['action'] == "user register"){
         $sql = "SELECT * FROM user where id='$id'";
         $id_result = $mysqli->query($sql);
@@ -25,7 +26,7 @@
         } else {
           header('Location: ./user_register_page.php?result=wrong');
         }
-
+        // Admin Register Page
       } else if($_POST['action'] == "admin register"){
         $sql = "SELECT * FROM admin where id='$id'";
         $id_result = $mysqli->query($sql);
