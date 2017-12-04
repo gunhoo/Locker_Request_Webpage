@@ -27,7 +27,7 @@
   </header>
   <nav class="sub_menu">
     <ul>
-      <li>Administrator Info</li>
+      <li id="clicked_sub_menu">Administrator Info</li>
     </ul>
   </nav>
   <article>
@@ -47,7 +47,7 @@
       </ul>
       <input id="reqBtn" type="button" value="Confirm">
 
-      <h1>withdrawal</h1>
+      <h1>Withdrawal</h1>
       <form action="index.html" method="post">
       <input class = "admin" id ="admin_password" type="password"
          name="admin_password" placeholder="Password">

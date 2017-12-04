@@ -12,7 +12,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="..\css\style_admin_view_user_info.css">
+    <link rel="stylesheet" type="text/css" href="..\css\style_admin_manage_user.css">
   </head>
 
   <body>
@@ -28,7 +28,7 @@
     </header>
     <nav class="sub_menu">
       <ul>
-        <li>View User Info</li>
+        <li id="clicked_sub_menu">View User Info</li>
       </ul>
     </nav>
     <article>
