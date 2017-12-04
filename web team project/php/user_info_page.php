@@ -62,7 +62,7 @@
       <ul id="info_list">
         <li><input class="info_list" type="password" name="password"  placeholder="Password" value="<?php echo $row['password'];?>"></li>
         <li><input class="info_list" type="password" name="password_confirm"  placeholder="Password Confirm" value="<?php echo $row['password'];?>"></li>
-        <li><input class="info_list" type="text" name="name" value="<?php echo $row['name'];?>"></li>
+        <li><input class="info_list" type="text" name="name" placeholder="Name" value="<?php echo $row['name'];?>"></li>
         <li><input class="info_list" type="text" name="ph_number" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
         <li><input class="info_list" type="text" name="email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
       </ul>
