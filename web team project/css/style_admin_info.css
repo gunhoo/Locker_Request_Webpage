@@ -18,7 +18,7 @@ header{
   padding-top:27px;
   height: 54px;
 
-  background-color: #4CAF50;  /*개발자 모드*/
+  background-color: #4CAF50;  /*ÃªÂ°Å“Ã«Â°Å“Ã¬Å¾Â Ã«ÂªÂ¨Ã«â€œÅ“*/
 }
 .menu {
   margin-right: 40px;
@@ -42,7 +42,8 @@ ul {
   background-color: #C8E6C9;
 }
 .admin_info {
-  margin-top: 3px;
+  position:relative;
+  bottom:30px;
   padding: 10px;
 }
 .sub_menu{
@@ -93,6 +94,14 @@ article h1{
   margin-top: 30px;
   padding-left: 0;
 }
+.admin {
+  padding:8px;
+  margin:3px;
+}
+#admin_password2{
+  position:relative;
+  bottom:30px;
+}
 #finded_student_info li {
   margin: 5px;
   padding: 3px;
@@ -121,30 +130,19 @@ article h1{
   left: 231px;
   bottom: 223px;
 }
-
-/*
-#findBtn {
-  position: relative;
-  left: 367px;
-  bottom: 167px;
-  padding: 8px;
-  font-size: 15px;
+#reqBtn {
+  position:relative;
+  bottom:50px;
+  right:7px;
+  height: 34px;
+  width:189px;
+  margin-left: 20px;
 }
-
-#activateBtn {
-  position: relative;
-  left: 367px;
-  bottom: 167px;
-  padding: 8px;
-  font-size: 15px;
+#withBtn{
+  position:relative;
+  bottom:-13px;
+  right:217px;
+  height: 34px;
+  width:189px;
+  margin-left: 20px;
 }
-
-
-#deactivateBtn {
-  position: relative;
-  left: 367px;
-  bottom: 167px;
-  padding: 8px;
-  font-size: 15px;
-}
-*/

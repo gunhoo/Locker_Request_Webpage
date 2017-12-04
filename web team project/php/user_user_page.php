@@ -68,6 +68,11 @@
       </ul>
       <input id="reqBtn" type="button" onclick="userInfojava()" value="Modify">
     </form>
+    <h1>Withdrawal</h1>
+    <form action="index.html" method="post">
+      <input id="pwText" type="password" name="admin_password" placeholder="Password">
+      <input id="withBtn" type="button" value="Withdrawal">
+    </form>
   </article>
 </body>
 

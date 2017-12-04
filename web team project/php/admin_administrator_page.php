@@ -49,9 +49,9 @@
 
       <h1>Withdrawal</h1>
       <form action="index.html" method="post">
-        <input class = "admin" id ="admin_password" type="password"
+        <input class = "admin" id ="admin_password2" type="password"
           name="admin_password" placeholder="Password">
-         <input id="reqBtn" type="button" value="Modify">
+         <input id="withBtn" type="button" value="Modify">
       </form>
   </article>
 </body>
