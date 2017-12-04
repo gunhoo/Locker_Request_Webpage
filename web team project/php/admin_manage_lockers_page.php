@@ -1,18 +1,15 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$pw = 'cau1010';
-	$dbName = 'mylocker';
-	$mysqli = new mysqli($host, $user, $pw, $dbName);
-
+	include "dbLogin.php";
+	$myAdmin_id = $_GET['myAdmin_id'];
+	
   $school_sql = "SELECT school From admin WHERE id Like myAdmin_id ";
   $major_sql = "SELECT major From admin WHERE id Like myAdmin_id ";
 
 
   function addLockerphp(){
   $sqladd = "INSERT INTO Locker (location, expiry_date, rental_fee, remittance_bank, remittance_account, user_id, status) VALUES( '".$_GET['location']."', '".$_GET['expiry_date']."', '".$_GET['rental_fee']."', '".$_GET['bank_field']."', '".$_GET['add_account_field']."', myAdmin_id,1)";
-$result =  mysqli_query($conn, $sqladd);
-}
+	$result =  mysqli_query($conn, $sqladd);
+	}
 
 ?>
 
@@ -34,10 +31,10 @@ alert("<?php echo addLockerphp() ?>");
   <header>
     <nav class="menu">
       <ul>
-				<li><a href=".\admin_home_page.php">Homepage</a></li>
-				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
-				<li ><a href=".\admin_manage_user_page.php">Manage User</a></li>
-				<li ><a href=".\admin_administrator_page.php">Administrator Page</a></li>
+				<li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
+				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+				<li ><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
+				<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
       </ul>
     </nav>
   </header>

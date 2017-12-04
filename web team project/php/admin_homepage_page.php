@@ -1,3 +1,7 @@
+<?php
+  $myAdmin_id = $_GET['myAdmin_id'];
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,10 +13,10 @@
     <header id="admin_header">
       <nav class="menu">
         <ul>
-          <li id="clicked_menu"><a href=".\admin_home_page.php">Homepage</a></li>
-          <li ><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
-          <li ><a href=".\admin_manage_user_page.php">Manage User</a></li>
-          <li ><a href=".\admin_administrator_page.php">Administrator Page</a></li>
+          <li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
+  				<li id="admin_clicked_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+  				<li ><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
+  				<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
         </ul>
       </nav>
     </header>

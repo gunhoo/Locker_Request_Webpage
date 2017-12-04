@@ -42,14 +42,14 @@ article {
   position: relative;
   bottom: 18.7px;
   height: 27px;
-
   width: 216px;
   padding: 3px;
+  left:-95px;
 }
 #loginBtn {
   position: relative;
   bottom: 70px;
-
+  left:225px;
   width: 90px;
   height: 67px;
   font-size: 15px;
@@ -57,7 +57,7 @@ article {
 }
 #adminLoginBtn {
     position: relative;
-    left:221px;
+    left:225px;
     bottom: 65px;
 
     width: 90px;
@@ -72,9 +72,13 @@ article {
     background-color: white;
     padding: 7px;
 }
-.registerBtn {
-    width: 151px;
-    margin-left: 4px;
-    padding: 5px;
-    float: left;
+.registerBtn{
+  width: 151px;
+  margin-left: 4px;
+  padding: 5px;
+}
+#adminRegisterBtn {
+  position: relative;
+  left: 158px;
+  bottom: 29px;
 }

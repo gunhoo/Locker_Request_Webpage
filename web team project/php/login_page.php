@@ -3,9 +3,11 @@
 
   if(isset($_GET['result'])){
     if($_GET['result'] == 'wrong'){
-      echo '<script>alert("잘못된 정보를 입력했습니다.")</script>';
+      echo '<script>alert("아이디 또는 비밀번호를 다시 확인하세요.")</script>';
     } else if ($_GET['result'] == 'success'){
-      echo '<script>alert("회원가입이 완료되었습다.")</script>';
+      echo '<script>alert("회원가입이 완료되었습니다.")</script>';
+    } else if ($_GET['result'] == 'null'){
+      echo '<script>alert("로그인 정보를 입력해주세요.")</script>';
     }
   }
  ?>
@@ -32,8 +34,8 @@
           <input type="password" name="password" placeholder="Password">
         </div>
         <div>
-          <input id="findBtn" type="submit" name="action" value="Find ID/PW">
           <input id="loginBtn" type="submit" name="action" value="User Login">
+          <input id="findBtn" type="submit" name="action" value="Find ID/PW">
           <input id="adminLoginBtn" type="submit" name="action" value="Admin Login">
         </div>
       </div>
@@ -43,7 +45,7 @@
         <input class="registerBtn" type="submit" value="User Register">
       </form>
       <form action="./admin_register_page.php" method="post">
-        <input class="registerBtn" type="submit" value="Admin Register">
+        <input class="registerBtn" id="adminRegisterBtn" type="submit" value="Admin Register">
       </form>
     </div>
   </article>
