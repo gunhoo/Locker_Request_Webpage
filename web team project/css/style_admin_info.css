@@ -41,6 +41,10 @@ ul {
 #clicked_menu {
   background-color: #C8E6C9;
 }
+.admin_info {
+  margin-top: 3px;
+  padding: 10px;
+}
 .sub_menu{
   border-right: 1px solid;
 

@@ -33,7 +33,7 @@
   <article>
     <h1>Admin Info</h1>
     <form action=".\admin_homepage.php" method="post">
-      <ul id="admin_info">
+      <ul class="admin_info">
           <li> <input class = "admin" id ="admin_password" type="password"
              name="admin_password" placeholder="Password"></li>
           <li> <input class = "admin" id ="admin_password_confirm" type="password"
@@ -49,10 +49,10 @@
 
       <h1>Withdrawal</h1>
       <form action="index.html" method="post">
-      <input class = "admin" id ="admin_password" type="password"
-         name="admin_password" placeholder="Password">
-      <input id="reqBtn" type="button" value="Confirm">
-    </form>
+        <input class = "admin" id ="admin_password" type="password"
+          name="admin_password" placeholder="Password">
+         <input id="reqBtn" type="button" value="Modify">
+      </form>
   </article>
 </body>
 
