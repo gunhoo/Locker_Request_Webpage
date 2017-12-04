@@ -17,8 +17,9 @@
         // Check ID & PW
         if($user != FALSE) {
           $result = mysqli_fetch_assoc($user);
+          // PW 일치 시 로그인
           if($result['password']==$password){
-            header('Location: ./user_homepage.php?myUser_id='.$id);
+            header('Location: ./user_homepage_page.php?myUser_id='.$id);
           } else {
             header('Location: ./login_page.php?result=wrong2');
           }
@@ -32,8 +33,9 @@
         // Check ID & PW
         if($admin != FALSE) {
           $result = mysqli_fetch_assoc($admin);
+          // PW 일치 시 로그인
           if($result['password']==$password){
-            header('Location: ./admin_homepage.php?myAdmin_id='.$id);
+            header('Location: ./admin_homepage_php.php?myAdmin_id='.$id);
           } else {
             header('Location: ./login_page.php?result=wrong');
           }
