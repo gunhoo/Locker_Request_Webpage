@@ -32,8 +32,8 @@
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
+          // 일치하는 ID or 학번 검색
         } else if(isset($id_result) && isset($num_result)){
-          // @@@@@@@@@@@@@@@@@@@ 조건문 이상 result 값 확인해야 함
           $sql = "INSERT INTO user (id, password, name, phone_number, email, student_number)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number')";
           $result = $mysqli->query($sql);
@@ -54,6 +54,7 @@
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
+          // 일치하는 ID or 학번 검색
         } else if(isset($id_result) && isset($num_result)){
           $account = $_POST['account'];
           $sql = "INSERT INTO admin (id, password, name, phone_number, email, student_number, account)";

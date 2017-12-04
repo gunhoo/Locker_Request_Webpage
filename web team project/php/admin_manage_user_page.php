@@ -1,9 +1,7 @@
 <?php
-	$host = 'localhost';
-	$user = 'root';
-	$pw = 'cau1010';
-	$dbName = 'mylocker';
-	$mysqli = new mysqli($host, $user, $pw, $dbName);
+	include "dbLogin.php";
+	$myAdmin_id = $_GET['myAdmin_id'];
+
 	$sql = "SELECT * FROM user WHERE student_number LIKE ".$_GET['studentNumber'];
 	$user = $mysqli->query($sql);
 ?>
@@ -21,10 +19,10 @@
     <header>
       <nav class="menu">
         <ul>
-					<li><a href=".\admin_home_page.php">Homepage</a></li>
-					<li ><a href=".\admin_manage_lockers_page.php">Manage Lockers</a></li>
-					<li id="clicked_menu"><a href=".\admin_manage_user_page.php">Manage User</a></li>
-					<li ><a href=".\admin_administrator_page.php">Administrator Page</a></li>
+					<li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
+					<li ><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+					<li id="clicked_menu"><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
+					<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
         </ul>
       </nav>
     </header>
@@ -43,10 +41,10 @@
           <button action=".\admin_view_user_info_page.php" id="search" type="submit">Search</button>
         </form>
       </div>
-			<?php
-				if($result = mysqli_fetch_assoc($user)){
-	      echo '<h1>Result</h1>
-	      <div id="find">
+	      <h1>Result</h1>
+				<?php
+					if($result = mysqli_fetch_assoc($user)){
+	     		echo ' <div id="find">
 	        <form>
 	          <ul id="info_list">
 	            <li>Name</li>
@@ -66,8 +64,6 @@
 	          echo '</ul>
 	        </form>
 	      </div>';
-			}else{
-				echo '<h1>Result</h1>';
 			}
 			?>
     </article>

@@ -1,10 +1,9 @@
 <?php
-  $host = 'localhost';
-  $user = 'root';
-  $pw = 'cau1010';
-  $dbName = 'mylocker';
-  $mysqli = new mysqli($host, $user, $pw, $dbName);
   $myUser_id = $_GET['myUser_id'];
+ ?>
+
+<?php
+  include "dbLogin.php";
 
   function userInfo(){
     $sql1 = "UPDATE user SET password = ".$_GET['password']." WHERE id Like '$myUser_id'  ";
@@ -40,13 +39,13 @@
   <header>
     <nav class="menu">
       <ul>
-        <li><a href=".\user_home_page.php">
+        <li><a href=".\user_homepage_page.php?myUser_id=<?=$myUser_id?>">
 	        Homepage</a></li>
-	      <li ><a href=".\user_locker_request_page.php">
+	      <li ><a href=".\user_locker_request_page.php?myUser_id=<?=$myUser_id?>">
 	        Locker Request</a></li>
-	      <li ><a href=".\user_locker_info_page.php">
+	      <li ><a href=".\user_locker_info_page.php?myUser_id=<?=$myUser_id?>">
 	        Manage My Locker</a></li>
-	      <li id="clicked_menu"><a href=".\user_info_page.php">User Page</a></li>
+	      <li id="clicked_menu"><a href=".\user_info_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
       </ul>
     </nav>
   </header>
@@ -67,7 +66,7 @@
         <li><input class="info_list" type="text" name="ph_number" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
         <li><input class="info_list" type="text" name="email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
       </ul>
-      <input id="reqBtn" type="button" onclick="userInfojava()" value="Confirm">
+      <input id="reqBtn" type="button" onclick="userInfojava()" value="Modify">
     </form>
   </article>
 </body>
