@@ -37,7 +37,9 @@
   </nav>
   <article>
     <h1>My Locker Info</h1>
-		<div>
+    <?php
+      if($result = mysqli_fetch_assoc($locker_number)){
+		echo '<div>
 			<form>
 				<ul id="result">
 					<li>State</li>
@@ -46,29 +48,26 @@
 					<li>Locker Number</li>
 					<li>Expiry Date</li>
 					<li>Rental Fee</li>
-					<li>Remittance Bank</li>
 					<li>Remittance Account</li>
 				</ul>
 			</form>
 		</div>
 		<div id="show">
 			<form>
-				<ul id="show">
-					<?php
-						if($result = mysqli_fetch_assoc($locker_number)){
+				<ul id="show">'."\n";
 							echo '<li><input class="info_list" type="text" name="state" value="'.$result['status'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="building"  value="'.$result['building'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="location"  value="'.$result['location'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="locker_number"  value="'.$result['locker_number'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="expiry_date"  value="'.$result['expiry_date'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="rental_fee"  value="'.$result['rental_fee'].'"></li>'."\n";
-							echo '<li><input class="info_list" type="text" name="remittance_bank"  value="'.$result['remittance_bank'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="remittance_account"  value="'.$result['remittance_accout'].'"></li>'."\n";
-						}
-					?>
-				</ul>
+				echo '</ul>
 			</form>
-		</div>
+		</div>'."\n";}else{
+      echo '<p>There is no locker you have requested for</p>'."\n";
+    }
+    ?>
   </article>
 </body>
 

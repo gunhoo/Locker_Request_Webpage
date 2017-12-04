@@ -22,7 +22,6 @@ header{
 }
 .menu {
   margin-right: 40px;
-
   float: right;
 }
 ul {
@@ -94,6 +93,15 @@ article h1{
   padding-left: 0;
 }
 #info_list li {
+  position:relative;
+  left: 130px;
+  bottom:30px;
+  padding: 7px;
+}
+#info_list button {
+  position:relative;
+  left: 360px;
+  bottom:70px;
   padding: 7px;
 }
 .checkInfo {
@@ -111,8 +119,20 @@ article h1{
 }
 #result {
   position: relative;
-  bottom: 180px;
+  bottom: 195px;
   padding: 10px;
+}
+#result li {
+  position: relative;
+  bottom: 50px;
+  padding: 3px;
+  left:-3px;
+}
+#find2 li {
+    width: 200px;
+    padding: 10px;
+    left:-200px;
+    margin-bottom: 5spx;
 }
 #search {
   position: relative;
