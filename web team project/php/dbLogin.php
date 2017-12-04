@@ -53,7 +53,7 @@
 			location VARCHAR(30) NOT NULL,
 			expiry_date DateTime,
 			rental_fee VARCHAR(12) NOT NULL,
-			remittance_accout VARCHAR(20) NOT NULL,
+			remittance_account VARCHAR(20) NOT NULL,
 			user_id VARCHAR(30) NOT NULL,
 			status VARCHAR(15) NOT NULL,
 			PRIMARY KEY (locker_id)
