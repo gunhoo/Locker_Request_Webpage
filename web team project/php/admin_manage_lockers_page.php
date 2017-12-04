@@ -1,10 +1,6 @@
 <?php
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
-	
-  $school_sql = "SELECT school From admin WHERE id Like myAdmin_id ";
-  $major_sql = "SELECT major From admin WHERE id Like myAdmin_id ";
-
 
   function addLockerphp(){
   $sqladd = "INSERT INTO Locker (location, expiry_date, rental_fee, remittance_bank, remittance_account, user_id, status) VALUES( '".$_GET['location']."', '".$_GET['expiry_date']."', '".$_GET['rental_fee']."', '".$_GET['bank_field']."', '".$_GET['add_account_field']."', myAdmin_id,1)";
@@ -21,10 +17,10 @@
   <link rel="stylesheet" type="text/css" href="..\css\style_admin_check_locker_info.css">
 
   <script language="javascript">
-function addLockerjava(){
-alert("<?php echo addLockerphp() ?>");
-}
-</script>
+	function addLockerjava(){
+		alert("<?php echo addLockerphp() ?>");
+	}
+	</script>
 </head>
 
 <body>
@@ -40,9 +36,9 @@ alert("<?php echo addLockerphp() ?>");
   </header>
   <nav class="sub_menu">
     <ul>
-      <li id="clicked_sub_menu">Add New Locker</li>
-      <li>Request List</li>
-      <li>Check Locker Info</li>
+			<li id="clicked_sub_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Add New Locker</a></li>
+      <li><a href=".\admin_request_list_page.php?myUser_id=<?=$myAdmin_id?>">Request List</a></li>
+      <li><a href=".\admin_check_locker_info_page.php?myUser_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
     </ul>
   </nav>
   <article>

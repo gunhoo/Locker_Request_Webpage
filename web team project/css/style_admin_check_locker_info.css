@@ -97,6 +97,16 @@ article h1{
   bottom: 190px;
   width: 200px;
 }
+.table {
+	border-collapse: collapse;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+.table th, .table td {
+  height: 30px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
 #bank_field {
   width: 70px;
   height: 21px;
