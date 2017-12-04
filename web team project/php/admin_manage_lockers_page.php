@@ -27,18 +27,18 @@
   <header>
     <nav class="menu">
       <ul>
-				<li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
-				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
-				<li ><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
-				<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
+				<li><a href=".\admin_homepage_page.php?myAdmin_id=<?=$myAdmin_id?>">Homepage</a></li>
+				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+				<li ><a href=".\admin_manage_user_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage User</a></li>
+				<li ><a href=".\admin_administrator_page.php?myAdmin_id=<?=$myAdmin_id?>">Administrator Page</a></li>
       </ul>
     </nav>
   </header>
   <nav class="sub_menu">
     <ul>
-			<li id="clicked_sub_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Add New Locker</a></li>
-      <li><a href=".\admin_request_list_page.php?myUser_id=<?=$myAdmin_id?>">Request List</a></li>
-      <li><a href=".\admin_check_locker_info_page.php?myUser_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
+			<li id="clicked_sub_menu"><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Add New Locker</a></li>
+      <li><a href=".\admin_request_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Request List</a></li>
+      <li><a href=".\admin_check_locker_info_page.php?myAdmin_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
     </ul>
   </nav>
   <article>

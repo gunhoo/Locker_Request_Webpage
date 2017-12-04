@@ -126,3 +126,12 @@ article h1{
   padding: 8px;
   font-size: 15px;
 }
+.confirmBtn{
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+}
+.rejectBtn{
+  width: 100px;
+  height: 30px;
+}
