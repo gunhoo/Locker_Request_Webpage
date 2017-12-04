@@ -43,9 +43,9 @@
 	        Homepage</a></li>
 	      <li ><a href=".\user_locker_request_page.php?myUser_id=<?=$myUser_id?>">
 	        Locker Request</a></li>
-	      <li ><a href=".\user_locker_info_page.php?myUser_id=<?=$myUser_id?>">
+	      <li ><a href=".\user_manage_my_locker_page.php?myUser_id=<?=$myUser_id?>">
 	        Manage My Locker</a></li>
-	      <li id="clicked_menu"><a href=".\user_info_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
+	      <li id="clicked_menu"><a href=".\user_user_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
       </ul>
     </nav>
   </header>
