@@ -12,10 +12,10 @@
 
       // Check User Login
       if ($_POST['action'] == "User Login"){
-        $sql = "SELECT * FROM user where id='$id'";
+        $sql = "SELECT * FROM user where id = '$id'";
         $user = $mysqli->query($sql);
         // Check ID & PW
-        if($user === TRUE) {
+        if($user != FALSE) {
           $result = mysqli_fetch_assoc($user);
           if($result['password']==$password){
             header('Location: ./user_homepage.php?myUser_id='.$id);
@@ -27,10 +27,10 @@
         }
         // Check Admin Login
       } else if ($_POST['action'] == "Admin Login"){
-        $sql = "SELECT * FROM admin where id='$id'";
+        $sql = "SELECT * FROM admin where id ='$id'";
         $admin = $mysqli->query($sql);
         // Check ID & PW
-        if($admin === TRUE) {
+        if($admin != FALSE) {
           $result = mysqli_fetch_assoc($admin);
           if($result['password']==$password){
             header('Location: ./admin_homepage.php?myAdmin_id='.$id);

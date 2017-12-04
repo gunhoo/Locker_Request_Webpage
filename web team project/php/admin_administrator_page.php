@@ -1,5 +1,5 @@
 <?php
-    include "adminDBLogin.php";
+    include "dbLogin.php";
 ?>
 
 
@@ -14,11 +14,11 @@
   <header>
     <nav class="menu">
       <ul>
-        <li><a href=".\admin_homepage.php">
+        <li><a href=".\admin_homepage_page.php">
           Homepage</a></li>
-        <li ><a href=".\admin_manage_lockers.php">
+        <li ><a href=".\admin_manage_lockers_page.php">
           Manage Lockers</a></li>
-        <li><a href=".\admin_manage_user.php">
+        <li><a href=".\admin_manage_user_page.php">
           Manage User</a></li>
         <li id="clicked_menu"><a href=".\admin_administrator_page.php">
           Administrator Page</a></li>

@@ -23,10 +23,10 @@
 
       // User Register Page
       if($_POST['action'] == "user register"){
-        $sql = "SELECT * FROM user where id='$id'";
+        $sql = "SELECT * FROM user where id LIKE '$id'";
         $id_result = $mysqli->query($sql);    // 일치하는 id 검색
 
-        $sql2 = "SELECT * FROM user where student_number='$student_number'";
+        $sql2 = "SELECT * FROM user where student_number LIKE '$student_number'";
         $num_result = $mysqli->query($sql2);  // 일치하는 학번 검색
 
         // Check whether ID, Student Number Alreay Exist
