@@ -4,7 +4,8 @@
 	$pw = 'cau1010';
 	$dbName = 'mylocker';
 	$mysqli = new mysqli($host, $user, $pw, $dbName);
-	$sql = "SELECT * FROM locker WHERE user_id LIKE 'cupjoo'";
+	$myUser_id=$_GET['myUser_id'];
+	$sql = "SELECT * FROM locker WHERE user_id LIKE '$myUser_id'";
 	$locker_number = $mysqli->query($sql);
 ?>
 

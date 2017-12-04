@@ -43,10 +43,10 @@
           <button action=".\admin_view_user_info_page.php" id="search" type="submit">Search</button>
         </form>
       </div>
-			<?php
-				if($result = mysqli_fetch_assoc($user)){
-	      echo '<h1>Result</h1>
-	      <div id="find">
+	      <h1>Result</h1>
+				<?php
+					if($result = mysqli_fetch_assoc($user)){
+	     		echo ' <div id="find">
 	        <form>
 	          <ul id="info_list">
 	            <li>Name</li>
@@ -66,8 +66,6 @@
 	          echo '</ul>
 	        </form>
 	      </div>';
-			}else{
-				echo '<h1>Result</h1>';
 			}
 			?>
     </article>

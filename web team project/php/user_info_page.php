@@ -67,7 +67,7 @@
         <li><input class="info_list" type="text" name="ph_number" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
         <li><input class="info_list" type="text" name="email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
       </ul>
-      <input id="reqBtn" type="button" onclick="userInfojava()" value="Confirm">
+      <input id="reqBtn" type="button" onclick="userInfojava()" value="Modify">
     </form>
   </article>
 </body>
