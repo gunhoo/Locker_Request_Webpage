@@ -26,13 +26,13 @@
   <header>
     <nav class="menu">
       <ul>
-        <li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">
+        <li><a href=".\admin_homepage_page.php?myAdmin_id=<?=$myAdmin_id?>">
           Homepage</a></li>
-        <li ><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">
+        <li ><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">
           Manage Lockers</a></li>
-        <li><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">
+        <li><a href=".\admin_manage_user_page.php?myAdmin_id=<?=$myAdmin_id?>">
           Manage User</a></li>
-        <li id="clicked_menu"><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">
+        <li id="clicked_menu"><a href=".\admin_administrator_page.php?myAdmin_id=<?=$myAdmin_id?>">
           Administrator Page</a></li>
       </ul>
     </nav>
