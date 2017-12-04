@@ -34,8 +34,8 @@
           <input type="password" name="password" placeholder="Password">
         </div>
         <div>
-          <input id="findBtn" type="submit" name="action" value="Find ID/PW">
           <input id="loginBtn" type="submit" name="action" value="User Login">
+          <input id="findBtn" type="submit" name="action" value="Find ID/PW">
           <input id="adminLoginBtn" type="submit" name="action" value="Admin Login">
         </div>
       </div>
