@@ -35,7 +35,7 @@
           $result = mysqli_fetch_assoc($admin);
           // PW 일치 시 로그인
           if($result['password']==$password){
-            header('Location: ./admin_homepage_php.php?myAdmin_id='.$id);
+            header('Location: ./admin_homepage_page.php?myAdmin_id='.$id);
           } else {
             header('Location: ./login_page.php?result=wrong');
           }
