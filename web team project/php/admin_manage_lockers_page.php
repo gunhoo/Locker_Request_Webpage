@@ -69,14 +69,7 @@
         </li>
         <li><input class="addInfo" type="text" name="expiry_date" value="2010-11-01" placeholder="(일)"></li>
         <li><input class="addInfo" type="text" name="rental_fee" value="5000원" placeholder="(원)"></li>
-        <li>
-          <select class="addInfo" id="bank_field" name="bank">
-            <option value="우리">우리</option>
-            <option value="카카오" selected>카카오</option>
-            <option value="신한">신한</option>
-          </select>
-        </li>
-        <li><input class="addInfo" id="add_account_field" type="text" name="account" value="1002-443-492296"></li>
+        <li><input class="addInfo" id="add_account_field" type="text" name="account" value="우리 1002-443-492296"></li>
       </ul>
       <input id="reqBtn" type="button" onclick = "addLockerjava()" value="Confirm">
     </form>
