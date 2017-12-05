@@ -8,7 +8,7 @@
 	$pw = 'cau1010';
 	$dbName = 'mylocker';
 	$mysqli = new mysqli($host, $user, $pw, $dbName);
-	$sql = "SELECT building, count(building) FROM locker GROUP BY building";
+	$sql = "SELECT building FROM locker GROUP BY building";
 	$user = $mysqli->query($sql);
 ?>
 
@@ -43,16 +43,16 @@
   </nav>
   <article>
     <h1>Locker Information</h1>
-    <form action="index.html" method="post">
-      <select class="selector" name="building" onchange="setLocation(this, 'location', 'locker_number')">
+    <form action="index.html" method="post" name="myForm">
+      <select class="selector" name="building" onChange="javascript:callLocation(this)">
         <option value="" disabled selected>Building</option>
         <?php
-  				while($location = mysqli_fetch_assoc($user)){
-            echo '<option value="'.$location['building'].'">'.$location['building'].'</option>';
+  				while($building = mysqli_fetch_assoc($user)){
+            echo '<option value="'.$building['building'].'">'.$building['building'].'</option>';
           }
         ?>
       </select>
-      <select class="selector" name="location">
+      <select class="selector" name="location" onChange="javascript:callLockerNumer(this)">
         <option value="" disabled selected>Location</option>
       </select>
       <select class="selector" name="locker_number">
@@ -70,6 +70,51 @@
     </form>
 
   </article>
+  <script type="text/javascript">
+    function callLocation(selectObj) {
+      document.write('fuck');
+      var myform = document.myForm;
+      // 초기화
+      var objSel = myform.location;
+      for(i=objSel.length; i>=0; i--){
+        objSel.options[i]=null;
+      }
+      // 추가
+      <?php
+        $building = "<script>document.write(selectObj.value);</script>";
+        $sql2 = "SELECT location FROM locker WHERE building='$building' GROUP BY location";
+        $loc = $mysqli->query($sql);
+      ?>
+      var op = new Option();
+      while(<?=$location = mysqli_fetch_assoc($loc)?>){
+        op.value = <?=$location['location']?>; // 값 설정
+        op.text = <?=$location['location']?>; // 텍스트 설정
+      }
+      op.selected = false;
+      myform.location.options.add(op); // 옵션 추가
+    }
+    function callLockerNumer(selectObj) {
+      var myform = document.myForm;
+      // 초기화
+      var objSel = myform.locker_number;
+      for(i=objSel.length; i>=0; i--){
+        objSel.options[i]=null;
+      }
+      // 추가
+      <?php
+        $location = "<script>document.write(selectObj.value);</script>";
+        $sql2 = "SELECT locker_number FROM locker WHERE location='$location' GROUP BY locker_number";
+        $locnum = $mysqli->query($sql);
+      ?>
+      var op = new Option();
+      while(<?=$locker_number = mysqli_fetch_assoc($locnum)?>){
+        op.value = <?=$locker_number['locker_number']?>; // 값 설정
+        op.text = <?=$locker_number['locker_number']?>; // 텍스트 설정
+      }
+      op.selected = false;
+      myform.locker_number.options.add(op); // 옵션 추가
+    }
+  </script>
 </body>
 
 </html>
