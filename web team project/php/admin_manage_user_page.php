@@ -1,9 +1,13 @@
 <?php
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
-	$search = $_POST['search'];
-	$sql = "SELECT * FROM user WHERE ".$_POST['searchby']."= '$search'";
-	$user = $mysqli->query($sql);
+	if(isset($_POST['search'])){
+		$search = $_POST['search'];
+		$sql = "SELECT * FROM user WHERE ".$_POST['searchby']."= '$search'";
+		$user = $mysqli->query($sql);
+	} else {
+		$user = null;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -47,30 +51,31 @@
         </form>
       </div>
 			<?php
-				if($result = mysqli_fetch_assoc($user)){
-	      echo ' <h1>Result</h1>
-	     	<div id="find2">
-	        <form>
-	          <ul id="info_list2">
-	            <li>Name</li>
-							<li>Student Number</li>
-	            <li>ID</li>
-	            <li>Phone Number</li>
-	            <li>E-mail</li>
-	          </ul>
-	        </form>
-	      </div>
-	      <div id="result">
-	        <form>
-	          <ul id="reult">';
-	            echo '<li><input class="info_list" type="text" name="name" value="'.$result['name'].'"></li>'."\n";
-							echo '<li><input class="info_list" type="text" name="student_number" value="'.$result['student_number'].'"></li>'."\n";
-	            echo '<li><input class="info_list" type="text" name="id"  value="'.$result['id'].'"></li>'."\n";
-	            echo '<li><input class="info_list" type="tel" name="phoneNumber" value="'.$result['phone_number'].'"></li>'."\n";
-	            echo '<li><input class="info_list" type="email" name="email"  value="'.$result['email'].'"></li>'."\n";
-	          echo '</ul>
-	        </form>
-	      </div>';
+				if($user != null){
+					$result = mysqli_fetch_assoc($user);
+		      echo ' <h1>Result</h1>
+		     	<div id="find2">
+		        <form>
+		          <ul id="info_list2">
+		            <li>Name</li>
+								<li>Student Number</li>
+		            <li>ID</li>
+		            <li>Phone Number</li>
+		            <li>E-mail</li>
+		          </ul>
+		        </form>
+		      </div>
+		      <div id="result">
+		        <form>
+		          <ul id="reult">';
+		            echo '<li><input class="info_list" type="text" name="name" value="'.$result['name'].'"></li>'."\n";
+								echo '<li><input class="info_list" type="text" name="student_number" value="'.$result['student_number'].'"></li>'."\n";
+		            echo '<li><input class="info_list" type="text" name="id"  value="'.$result['id'].'"></li>'."\n";
+		            echo '<li><input class="info_list" type="tel" name="phoneNumber" value="'.$result['phone_number'].'"></li>'."\n";
+		            echo '<li><input class="info_list" type="email" name="email"  value="'.$result['email'].'"></li>'."\n";
+		          echo '</ul>
+		        </form>
+		      </div>';
 			}else{
 				echo '<p>No results</p>'."\n";
 			}
