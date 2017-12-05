@@ -13,7 +13,7 @@
 		// DB 생성
 		$sql = "CREATE DATABASE IF NOT EXISTS '$dbName'";
 		$result = $mysqli->query($sql);
-		
+
 		// 검색: mysql_connect 에러 Call to undefined function mysql_connect()
 		// 참고: https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_install&wr_id=43642
 	*/
@@ -63,7 +63,7 @@
 			locker_number INT NOT NULL,
 			building VARCHAR(30) NOT NULL,
 			location VARCHAR(30) NOT NULL,
-			expiry_date DateTime,
+			expiry_date VARCHAR(30) NOT NULL,
 			rental_fee VARCHAR(12) NOT NULL,
 			remittance_account VARCHAR(20) NOT NULL,
 			user_id VARCHAR(30),

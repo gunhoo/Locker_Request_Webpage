@@ -15,8 +15,14 @@
       }
     $mysqli->query($sql);
     }else{
-      header('Location: ./admin_request_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
+      if($_POST['btn']=="Confirm" || $_POST['btn']=="Reject")
+        header('Location: ./admin_request_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
+      else
+        header('Location: ./admin_used_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
     }
   }
-  header('Location: ./admin_request_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
+  if($_POST['btn']=="Confirm" || $_POST['btn']=="Reject")
+    header('Location: ./admin_request_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
+  else
+    header('Location: ./admin_used_list_page.php?myAdmin_id='.$_GET['myAdmin_id']);
 ?>
