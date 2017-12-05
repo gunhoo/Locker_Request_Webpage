@@ -4,7 +4,7 @@
 	if($myAdmin_id ==""){
 		header('Location: ./login_page.php?result=no_id');
 	}
-	
+
 	if(isset($_POST['search'])){
 		$search = $_POST['search'];
 		$sql = "SELECT * FROM user WHERE ".$_POST['searchby']."= '$search'";
@@ -31,6 +31,7 @@
 					<li ><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
 					<li id="clicked_menu"><a href=".\admin_manage_user_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage User</a></li>
 					<li ><a href=".\admin_administrator_page.php?myAdmin_id=<?=$myAdmin_id?>">Administrator Page</a></li>
+					<li><a href=".\admin_homepage_page.php?myAdmin_id=">Logout</a></li>
         </ul>
       </nav>
     </header>

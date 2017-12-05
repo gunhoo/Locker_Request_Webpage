@@ -35,6 +35,7 @@
 	      <li ><a href=".\user_manage_my_locker_page.php?myUser_id=<?=$myUser_id?>">
 	        Manage My Locker</a></li>
 	      <li><a href=".\user_user_page.php?myUser_id=<?=$myUser_id?>">User Page</a></li>
+        <li><a href=".\admin_homepage_page.php?myUser_id=">Logout</a></li>
       </ul>
     </nav>
   </header>
