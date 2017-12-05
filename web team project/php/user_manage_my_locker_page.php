@@ -64,7 +64,7 @@
 							echo '<li><input class="info_list" type="text" name="locker_number"  value="'.$result['locker_number'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="expiry_date"  value="'.$result['expiry_date'].'"></li>'."\n";
 							echo '<li><input class="info_list" type="text" name="rental_fee"  value="'.$result['rental_fee'].'"></li>'."\n";
-							echo '<li><input class="info_list" type="text" name="remittance_account"  value="'.$result['remittance_accout'].'"></li>'."\n";
+							echo '<li><input class="info_list" type="text" name="remittance_account"  value="'.$result['remittance_account'].'"></li>'."\n";
 				echo '</ul>
 			</form>
 		</div>'."\n";}else{
