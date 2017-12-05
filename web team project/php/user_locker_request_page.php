@@ -3,9 +3,6 @@
   if($myUser_id ==""){
     header('Location: ./login_page.php?result=no_id');
   }
- ?>
-
-<?php
 	$host = 'localhost';
 	$user = 'root';
 	$pw = 'cau1010';
