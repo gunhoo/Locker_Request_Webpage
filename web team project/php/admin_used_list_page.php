@@ -4,7 +4,7 @@
 	if($myAdmin_id ==""){
 		header('Location: ./login_page.php?result=no_id');
 	}
-	$sql = "SELECT * FROM locker l, user u WHERE l.status = 'ready' AND u.id = l.user_id";
+	$sql = "SELECT * FROM locker l, user u WHERE l.status = 'used' AND u.id = l.user_id";
 	$requestedLocker = $mysqli->query($sql);
 ?>
 
@@ -38,13 +38,13 @@
   <nav class="sub_menu">
     <ul>
       <li><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Add New Locker</a></li>
-      <li id="clicked_sub_menu"><a href=".\admin_request_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Request List</a></li>
-			<li><a href=".\admin_used_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Used List</a></li>
+      <li><a href=".\admin_request_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Request List</a></li>
+			<li id="clicked_sub_menu"><a href=".\admin_used_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Used List</a></li>
       <li><a href=".\admin_check_locker_info_page.php?myAdmin_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
     </ul>
   </nav>
 	<article>
-		<h1>Request List</h1>
+		<h1>Used List</h1>
 		<button class = "selectBtn" onclick="checkAll(true);">Select All</button>
 		<button class = "selectBtn" onclick="checkAll(false);">Select Cancel</button>
 		<form action="./confirm_locker.php?myAdmin_id=<?=$myAdmin_id?>" method="post">
@@ -76,8 +76,7 @@
 				</tr>'."\n";}
 				?>
 			</table>
-			<input class="confirmBtn" name="btn" value="Confirm" type="submit">
-			<input class="rejectBtn" name="btn" value="Reject" type="submit">
+			<input class="disableBtn" name="btn" value="Disable" type="submit">
 		</form>
 	</article>
 </body>
