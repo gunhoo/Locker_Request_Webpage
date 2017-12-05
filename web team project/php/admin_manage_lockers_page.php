@@ -1,6 +1,9 @@
 <?php
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
+	if($myAdmin_id ==""){
+		header('Location: ./login_page.php?result=no_id');
+	}
 
   function addLockerphp(){
   $sqladd = "INSERT INTO Locker (location, expiry_date, rental_fee, remittance_bank, remittance_account, user_id, status) VALUES( '".$_GET['location']."', '".$_GET['expiry_date']."', '".$_GET['rental_fee']."', '".$_GET['bank_field']."', '".$_GET['add_account_field']."', myAdmin_id,1)";
