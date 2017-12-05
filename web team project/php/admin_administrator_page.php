@@ -47,15 +47,15 @@
     <form action=".\modify.php?myAdmin_id=<?=$myAdmin_id?>" method="post">
       <ul class="admin_info">
           <li> <input class = "admin" id ="admin_password" type="password"
-             name="admin_password" placeholder="Password"></li>
+             name="password" placeholder="Password"></li>
           <li> <input class = "admin" id ="admin_password_confirm" type="password"
-             name="admin_password_confirm" placeholder="Password Confirm"></li>
+             name="password_confirm" placeholder="Password Confirm"></li>
           <li> <input class = "admin" id ="admin_name" type="text"
-             name="admin_name" placeholder="Name" value="<?php echo $row['name'];?>"></li>
+             name="name" placeholder="Name" value="<?php echo $row['name'];?>"></li>
           <li> <input class = "admin" id ="admin_phnum" type="text"
-            name="admin_phnum" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
+            name="phone_number" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
          <li> <input class = "admin" id ="admin_email" type="text"
-            name="admin_email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
+            name="email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
      </ul>
      <input id="reqBtn" type="submit" name="action" value="Admin Modify">
 

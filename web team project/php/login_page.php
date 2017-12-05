@@ -6,7 +6,7 @@
       echo '<script>alert("아이디 또는 비밀번호를 다시 확인하세요.")</script>';
     } else if ($_GET['result'] == 'success'){
       echo '<script>alert("회원가입이 완료되었습니다.")</script>';
-    } else if ($_GET['result'] == 'null'){
+    } else if ($_GET['result'] == 'empty'){
       echo '<script>alert("로그인 정보를 입력해주세요.")</script>';
     } else if ($_GET['result'] == 'delete'){
       echo '<script>alert("이용해 주셔서 감사합니다.")</script>';

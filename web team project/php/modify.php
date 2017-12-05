@@ -13,14 +13,14 @@
     } else if ($_POST['action'] == "Admin Modify"){
       $id = $_GET['myAdmin_id'];
       $subject = 'admin';
-      $link = 'Location: ./admin_administrator_page.php?myUser_id='.$id.'&result=';
+      $link = 'Location: ./admin_administrator_page.php?myAdmin_id='.$id.'&result=';
     }
 
     $password = $_POST['password'];
     $confirm = $_POST['password_confirm'];
 
     // Check PW error
-    if(($password != null) && ($confirm != null) && ($password === $confirm)){
+    if(($password != "") && ($confirm != "") && ($password === $confirm)){
       // Update
       $name = $_POST['name'];
       $phone_number = $_POST['phone_number'];
