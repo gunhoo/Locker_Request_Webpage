@@ -56,15 +56,15 @@
             name="phone_number" placeholder="Phone Number" value="<?php echo $row['phone_number']; ?>"></li>
          <li> <input class = "admin" id ="admin_email" type="text"
             name="email" placeholder="E-mail" value="<?php echo $row['email']; ?>"></li>
-     </ul>
-     <input id="reqBtn" type="submit" name="action" value="Admin Modify">
-
-     <h1>Withdrawal</h1>
-     <form action=".\delete.php?myAdmin_id=<?=$myAdmin_id?>" method="post">
-       <input class = "admin" id ="admin_password2" type="password"
-         name="admin_password" placeholder="Password">
-        <input id="withBtn" type="submit" name="action" value="Admin Withdraw">
-     </form>
+      </ul>
+      <input id="reqBtn" type="submit" name="action" value="Admin Modify">
+    </form>
+    <h1>Withdrawal</h1>
+    <form action=".\delete.php?myAdmin_id=<?=$myAdmin_id?>" method="post">
+      <input class = "admin" id ="admin_password2" type="password"
+         name="password" placeholder="Password">
+      <input id="withBtn" type="submit" name="action" value="Admin Withdraw">
+    </form>
  </article>
 
 </body>
