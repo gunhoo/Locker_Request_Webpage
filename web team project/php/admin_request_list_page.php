@@ -57,7 +57,7 @@
 					echo '<td>'.$requestedLockerList['location'].'</td>'."\n";
 					echo '<td>'.$requestedLockerList['locker_number'].'</td>'."\n";
 					echo'<td>
-						<input value="'.$requestedLockerList['locker_id'].'" type="checkbox" name="check"/>
+						<input value="'.$requestedLockerList['locker_id'].'" type="checkbox" name="check[]"/>
 					</td>
 				</tr>'."\n";}
 				?>
