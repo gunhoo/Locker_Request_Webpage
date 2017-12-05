@@ -1,6 +1,10 @@
 <?php
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
+	if($myAdmin_id ==""){
+		header('Location: ./login_page.php?result=no_id');
+	}
+	
 	if(isset($_POST['search'])){
 		$search = $_POST['search'];
 		$sql = "SELECT * FROM user WHERE ".$_POST['searchby']."= '$search'";

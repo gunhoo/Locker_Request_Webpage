@@ -4,7 +4,19 @@
 	$user = 'root';
 	$pw = 'cau1010';
 	$dbName = 'mylocker';
+	// MySQL & DB 접속
 	$mysqli = new mysqli($host, $user, $pw, $dbName);
+
+	/*
+		// MySQL 접속
+		$mysqli = mysql_connect($host, $user, $pw);
+		// DB 생성
+		$sql = "CREATE DATABASE IF NOT EXISTS '$dbName'";
+		$result = $mysqli->query($sql);
+		
+		// 검색: mysql_connect 에러 Call to undefined function mysql_connect()
+		// 참고: https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_install&wr_id=43642
+	*/
 
 	// Access to User Table
 	$sql = "SELECT * FROM user";

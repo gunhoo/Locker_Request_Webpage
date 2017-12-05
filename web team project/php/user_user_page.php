@@ -1,6 +1,9 @@
 <?php
   include "dbLogin.php";
   $myUser_id = $_GET['myUser_id'];
+  if($myUser_id ==""){
+    header('Location: ./login_page.php?result=no_id');
+  }
   $sql = "SELECT* FROM user WHERE id Like '$myUser_id'";
   $result = mysqli_query($mysqli, $sql);
   $row = mysqli_fetch_assoc($result);

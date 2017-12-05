@@ -10,6 +10,8 @@
       echo '<script>alert("로그인 정보를 입력해주세요.")</script>';
     } else if ($_GET['result'] == 'delete'){
       echo '<script>alert("이용해 주셔서 감사합니다.")</script>';
+    } else if ($_GET['result'] == 'no_id'){
+      echo '<script>alert("로그아웃 되었습니다.")</script>';
     }
   }
  ?>
