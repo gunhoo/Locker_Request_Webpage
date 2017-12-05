@@ -11,6 +11,13 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" type="text/css" href="..\css\style_admin_check_locker_info.css">
+	<script language="javascript">
+	function checkAll(checked) {
+		var chk = document.getElementsByName("check[]");
+		for(i = 0; i < chk.length; i++)
+			chk.item(i).checked = checked;
+		}
+	</script>
 </head>
 
 <body>
@@ -33,6 +40,8 @@
   </nav>
 	<article>
 		<h1>Request List</h1>
+		<button class = "selectBtn" onclick="checkAll(true);">Select All</button>
+		<button class = "selectBtn" onclick="checkAll(false);">Select Cancel</button>
 		<form action="./confirm_locker.php?myAdmin_id=<?=$myAdmin_id?>" method="post">
 			<table class="table">
 				<tr>
