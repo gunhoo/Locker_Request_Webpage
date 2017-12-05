@@ -72,6 +72,7 @@
   </article>
   <script type="text/javascript">
     function callLocation(selectObj) {
+      document.write('fuck');
       var myform = document.myForm;
       // 초기화
       var objSel = myform.location;
@@ -79,8 +80,8 @@
         objSel.options[i]=null;
       }
       // 추가
-      <?$building=?> = selectObj.value; // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
       <?php
+        $building = "<script>document.write(selectObj.value);</script>";
         $sql2 = "SELECT location FROM locker WHERE building='$building' GROUP BY location";
         $loc = $mysqli->query($sql);
       ?>
@@ -100,8 +101,8 @@
         objSel.options[i]=null;
       }
       // 추가
-      <?$location=?> = selectObj.value; // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
       <?php
+        $location = "<script>document.write(selectObj.value);</script>";
         $sql2 = "SELECT locker_number FROM locker WHERE location='$location' GROUP BY locker_number";
         $locnum = $mysqli->query($sql);
       ?>
