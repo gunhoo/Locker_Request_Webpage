@@ -41,6 +41,13 @@ ul {
 #clicked_menu {
   background-color: #C8E6C9;
 }
+.selectBtn{
+  position: relative;
+  left:500px;
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}
 .sub_menu{
   border-right: 1px solid;
 
@@ -116,8 +123,8 @@ article h1{
   bottom: 158px;
 }
 #add_account_field {
-  left: 231px;
-  bottom: 223px;
+  left: 155px;
+  bottom: 190px;
 }
 #reqBtn {
   position: relative;
@@ -125,4 +132,13 @@ article h1{
   bottom: 167px;
   padding: 8px;
   font-size: 15px;
+}
+.confirmBtn{
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+}
+.rejectBtn{
+  width: 100px;
+  height: 30px;
 }

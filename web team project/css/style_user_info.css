@@ -18,7 +18,7 @@ header{
   padding-top:27px;
   height: 54px;
 
-  background-color: #01579B;  /*개발자 모드*/
+  background-color: #01579B;  /*ê°œë°œìž ëª¨ë“œ*/
 }
 .menu {
   margin-right: 40px;
@@ -78,6 +78,9 @@ article h1{
     margin-bottom: 20px;
 }
 .info_list {
+  position:relative;
+  right:25px;
+  bottom:18px;
   margin-top: 3px;
   padding: 10px;
 }
@@ -100,11 +103,24 @@ article h1{
 }
 
 #reqBtn{
-  height: 30px;
-  margin-left: 40px;
+  position:relative;
+  bottom:20px;
+  right:2px;
+  height: 35px;
+  width:193px;
+  margin-left: 20px;
 }
-
+#pwText {
+  position:relative;
+  bottom:20px;
+  left:15px;
+  padding:10px;
+}
 #withBtn{
-  height: 30px;
-  margin-left: 200px;
+  position:relative;
+  bottom:-30px;
+  right:204px;
+  height: 35px;
+  width:193px;
+  margin-left: 20px;
 }

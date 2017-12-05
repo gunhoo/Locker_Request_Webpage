@@ -1,6 +1,9 @@
 <?php
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
+	if($myAdmin_id ==""){
+		header('Location: ./login_page.php?result=no_id');
+	}
 
   function addLockerphp(){
   $sqladd = "INSERT INTO Locker (location, expiry_date, rental_fee, remittance_bank, remittance_account, user_id, status) VALUES( '".$_GET['location']."', '".$_GET['expiry_date']."', '".$_GET['rental_fee']."', '".$_GET['bank_field']."', '".$_GET['add_account_field']."', myAdmin_id,1)";
@@ -27,18 +30,18 @@
   <header>
     <nav class="menu">
       <ul>
-				<li><a href=".\admin_homepage_page.php?myUser_id=<?=$myAdmin_id?>">Homepage</a></li>
-				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
-				<li ><a href=".\admin_manage_user_page.php?myUser_id=<?=$myAdmin_id?>">Manage User</a></li>
-				<li ><a href=".\admin_administrator_page.php?myUser_id=<?=$myAdmin_id?>">Administrator Page</a></li>
+				<li><a href=".\admin_homepage_page.php?myAdmin_id=<?=$myAdmin_id?>">Homepage</a></li>
+				<li id="clicked_menu"><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage Lockers</a></li>
+				<li ><a href=".\admin_manage_user_page.php?myAdmin_id=<?=$myAdmin_id?>">Manage User</a></li>
+				<li ><a href=".\admin_administrator_page.php?myAdmin_id=<?=$myAdmin_id?>">Administrator Page</a></li>
       </ul>
     </nav>
   </header>
   <nav class="sub_menu">
     <ul>
-			<li id="clicked_sub_menu"><a href=".\admin_manage_lockers_page.php?myUser_id=<?=$myAdmin_id?>">Add New Locker</a></li>
-      <li><a href=".\admin_request_list_page.php?myUser_id=<?=$myAdmin_id?>">Request List</a></li>
-      <li><a href=".\admin_check_locker_info_page.php?myUser_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
+			<li id="clicked_sub_menu"><a href=".\admin_manage_lockers_page.php?myAdmin_id=<?=$myAdmin_id?>">Add New Locker</a></li>
+      <li><a href=".\admin_request_list_page.php?myAdmin_id=<?=$myAdmin_id?>">Request List</a></li>
+      <li><a href=".\admin_check_locker_info_page.php?myAdmin_id=<?=$myAdmin_id?>">Check Locker Info</a></li>
     </ul>
   </nav>
   <article>
@@ -69,14 +72,7 @@
         </li>
         <li><input class="addInfo" type="text" name="expiry_date" value="2010-11-01" placeholder="(일)"></li>
         <li><input class="addInfo" type="text" name="rental_fee" value="5000원" placeholder="(원)"></li>
-        <li>
-          <select class="addInfo" id="bank_field" name="bank">
-            <option value="우리">우리</option>
-            <option value="카카오" selected>카카오</option>
-            <option value="신한">신한</option>
-          </select>
-        </li>
-        <li><input class="addInfo" id="add_account_field" type="text" name="account" value="1002-443-492296"></li>
+        <li><input class="addInfo" id="add_account_field" type="text" name="account" value="우리 1002-443-492296"></li>
       </ul>
       <input id="reqBtn" type="button" onclick = "addLockerjava()" value="Confirm">
     </form>

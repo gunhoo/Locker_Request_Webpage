@@ -2,49 +2,39 @@
   include "dbLogin.php";
 
   if(isset($_POST['action'])){
-    // to Find ID/PW Page
+    // Link to Find ID/PW Page
     if($_POST['action'] == "Find ID/PW"){
       header('Location: ./find_page.php');
-      // check whether ID or PW is null
-    } else if($_POST['id'] != "" && $_POST['password'] != ""){
+      // Check whether ID or PW is empty
+    } else if (($_POST['id'] == "") || ($_POST['password'] == "")){
+      header('Location: ./login_page.php?result=empty');
+      // Find User or Admin Info
+    } else {
       $id = $_POST['id'];
       $password = $_POST['password'];
-
-      // Check User Login
+      // Check whether User or Admin
       if ($_POST['action'] == "User Login"){
-        $sql = "SELECT * FROM user where id = '$id'";
-        $user = $mysqli->query($sql);
-        // Check ID & PW
-        if($user != FALSE) {
-          $result = mysqli_fetch_assoc($user);
-          // PW 일치 시 로그인
-          if($result['password']==$password){
-            header('Location: ./user_homepage_page.php?myUser_id='.$id);
-          } else {
-            header('Location: ./login_page.php?result=wrong2');
-          }
-        } else {
-          header('Location: ./login_page.php?result=wrong3');
-        }
-        // Check Admin Login
+        $table = 'user';
+        $link = 'Location:./user_homepage_page.php?myUser_id='.$id;
       } else if ($_POST['action'] == "Admin Login"){
-        $sql = "SELECT * FROM admin where id ='$id'";
-        $admin = $mysqli->query($sql);
-        // Check ID & PW
-        if($admin != FALSE) {
-          $result = mysqli_fetch_assoc($admin);
-          // PW 일치 시 로그인
-          if($result['password']==$password){
-            header('Location: ./admin_homepage_page.php?myAdmin_id='.$id);
-          } else {
-            header('Location: ./login_page.php?result=wrong');
-          }
+        $table = 'admin';
+        $link = 'Location:./admin_homepage_page.php?myAdmin_id='.$id;
+      }
+
+      $sql = "SELECT * FROM $table where id = '$id'";
+      $result = $mysqli->query($sql);
+      // Check whether ID exists
+      if(!isset($result)){
+        header('Location: ./login_page.php?result=wrong');
+      } else {
+        $info = mysqli_fetch_assoc($result);
+        // Check PW
+        if($info['password']==$password){
+          header($link);
         } else {
           header('Location: ./login_page.php?result=wrong');
         }
       }
-    } else {
-      header('Location: ./login_page.php?result=null');
     }
   }
 ?>
