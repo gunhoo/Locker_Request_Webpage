@@ -1,3 +1,5 @@
+
+
 a:visited{
   color:black;
   text-decoration:none;
@@ -80,5 +82,36 @@ article {
   margin-top: 40px;
 }
 article h1{
+  margin-left: -35px;
+
   margin-bottom: 40px;
+
+  font-size: 60px;
+
+  color: #FCA205;
+  font-family: 'Lobster';
+}
+
+article h2{
+margin-left: -20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #07b273;
+  font-family: 'Lobster';
+}
+
+article h3{
+
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #111111;
+  font-family: 'Lobster';
+}
+
+article h5{
+margin-left: 1px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #111111;
+  font-family: 'Lobster';
 }

@@ -92,6 +92,25 @@ article h1{
   margin: 5px;
   padding: 3px;
 }
+.info {
+  position:relative;
+  left: 155px;
+  bottom: 98px;
+  border: 1px solid;
+  width: 200px;
+}
+#reqBtn {
+  position: relative;
+  left: 378px;
+  bottom: 150px;
+  padding: 8px;
+  font-size: 15px;
+}
+#reqBtn2 {
+  position: relative;
+  padding: 8px;
+  font-size: 15px;
+}
 .checkInfo {
   position:relative;
   left: 155px;
@@ -126,13 +145,7 @@ article h1{
   left: 155px;
   bottom: 190px;
 }
-#reqBtn {
-  position: relative;
-  left: 367px;
-  bottom: 167px;
-  padding: 8px;
-  font-size: 15px;
-}
+
 .confirmBtn{
   margin-top: 20px;
   width: 100px;

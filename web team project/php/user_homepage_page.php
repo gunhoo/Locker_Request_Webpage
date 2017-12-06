@@ -10,6 +10,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" type="text/css" href="..\css\style_main.css">
   </head>
   <body>
@@ -32,9 +38,29 @@
         <li id="user_clicked_sub_menu">Summary</li>
       </ul>
     </nav>
-    <article>
-      <h1>About Locker Manager</h1>
-      How to use?
+
+      <article>
+        <h1>About Locker Manager</h1>
+      <h2>How to use Manager?</h2>
+
+      <h3>First, You can request Lockers.</h3>
+       This Site is made for your Locker.</br>
+       So, You can borrow the Lockers Very Cheap & Easy</br>
+
+       <h3>Second, You can manage your Locker </h3>
+       This System can edit your Lockers</br>
+       So, you can know your Locker's expiry date and rental_fee etc.. </br>
+
+       <h3>Third, You can view your infos.</h3>
+       Your Info is stored In our DB Very Safely</br>
+       So, you can edit your info Very Safe & Easy</br>
+       </article>
+
+       <article>
+       <h2>Made By</h2>
+      <h5> Kim Chan-il : yh0438 </h5>
+      <h5> Park Gun-hoo : gunhoo</h5>
+      <h5> Choi Jun-young : cupjoo</h5>
     </article>
   </body>
 </html>
