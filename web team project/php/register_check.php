@@ -25,20 +25,23 @@
       if($_POST['action'] == "user register"){
         $sql = "SELECT * FROM user where id = '$id'";
         $id_result = $mysqli->query($sql);    // 일치하는 id 검색
+        $id_value = mysqli_fetch_assoc($id_result);
 
         $sql2 = "SELECT * FROM user where student_number = '$student_number'";
         $num_result = $mysqli->query($sql2);  // 일치하는 학번 검색
+        $num_value = mysqli_fetch_assoc($num_result);
 
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
           // 일치하는 ID or 학번 검색
-        } else if(!isset($id_result) && !isset($num_result)){
+        } else if(!$id_value['id'] && !$num_value['id']){
           $sql = "INSERT INTO user (id, password, name, phone_number, email, student_number)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number')";
           $result = $mysqli->query($sql);
           header('Location: ./login_page.php?result=success');
         } else {
+          //echo $id_result.', '.$num_result;
           header('Location: ./user_register_page.php?result=exist');
         }
 
@@ -47,15 +50,17 @@
       } else if($_POST['action'] == "admin register"){
         $sql = "SELECT * FROM admin where id='$id'";
         $id_result = $mysqli->query($sql);    // 일치하는 id 검색
+        $id_value = mysqli_fetch_assoc($id_result);
 
         $sql2 = "SELECT * FROM admin where student_number='$student_number'";
         $num_result = $mysqli->query($sql2);  // 일치하는 학번 검색
+        $num_value = mysqli_fetch_assoc($num_result);
 
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
           header('Location: ./login_page.php?result=diff');
           // 일치하는 ID or 학번 검색
-        } else if(!isset($id_result) && !isset($num_result)){
+        } else if(!$id_value['id'] && !$num_value['id']){
           $account = $_POST['account'];
           $sql = "INSERT INTO admin (id, password, name, phone_number, email, student_number, account)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number', '$account')";
