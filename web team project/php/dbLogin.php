@@ -2,7 +2,7 @@
 	// MySQL Login
 	$host = 'localhost';
 	$user = 'root';
-	$pw = 'chl010177';
+	$pw = 'cau1010';
 	$dbName = 'mylocker';
 	// MySQL & DB 접속
 	$mysqli = new mysqli($host, $user, $pw, $dbName);
