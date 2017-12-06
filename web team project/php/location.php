@@ -5,7 +5,7 @@
   }
 	include "dbLogin.php";
   $building = $_POST['building'];
-	$sql = "SELECT location FROM locker WHERE building='$building' GROUP BY location";
+	$sql = "SELECT location FROM locker WHERE building='$building' AND status = 'empty' GROUP BY location";
 	$user = $mysqli->query($sql);
 ?>
 
