@@ -51,7 +51,7 @@
           }
         ?>
       </select>
-      <input id="reqBtn2" type="submit" value="Request">
+      <input id="reqBtn2" type="submit" value="Check">
     </form>
 
   </article>

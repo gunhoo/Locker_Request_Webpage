@@ -50,11 +50,14 @@
         ?>
       </select>
       <ul id="info_list">
+        <input id="chkBtn" type="submit" value="Check">
+      </ul>
+      <?php
+        if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
+    echo  '<ul id="info_list">
         <li>Expiry Date</li>
         <li>Rental Fee</li>
-        <li>Remittance Account</li>
-        <?php
-          if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
+        <li>Remittance Account</li>';
             $building = $_GET['building'];
             $location = $_GET['location'];
             $locker_number = $_GET['locker_number'];
@@ -64,16 +67,31 @@
             echo '<li class="info">'.$locker['expiry_date'].'</li>';
             echo '<li class="info">'.$locker['rental_fee'].'</li>';
             echo '<li class="info">'.$locker['remittance_account'].'</li>';
+            echo '</ul>';
           } else{
-            echo '<li class="info">정보없음</li>';
-            echo '<li class="info">정보없음</li>';
-            echo '<li class="info">정보없음</li>';
+
           }
          ?>
-      </ul>
-      <input id="reqBtn" type="submit" value="Request">
+
     </form>
 
+    <?php
+    if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
+      $building = $_GET['building'];
+      $location = $_GET['location'];
+      $locker_number = $_GET['locker_number'];
+      $myUser_id = $_GET['myUser_id'];
+      echo '<form action=".\request_locker.php" method="POST" name="myForm2">';
+      echo '<ul id="info_list">';
+      echo '<input type="hidden" name="myUser_id" value="'.$myUser_id.'">';
+      echo '<input type="hidden" name="building" value="'.$building.'">';
+      echo '<input type="hidden" name="location" value="'.$location.'">';
+      echo '<input type="hidden" name="locker_number" value="'.$locker_number.'">';
+      echo '<input id="reqBtn" type="submit" value="Request">';
+      echo '</ul>';
+      echo '</form>';
+    }
+    ?>
   </article>
 </body>
 

@@ -104,3 +104,10 @@ article h1{
   padding: 8px;
   font-size: 15px;
 }
+#chkBtn {
+  position: relative;
+  bottom:85px;
+  left:170px;
+  padding: 8px;
+  font-size: 15px;
+}

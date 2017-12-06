@@ -6,7 +6,7 @@
 	include "dbLogin.php";
   $building = $_POST['building'];
   $location = $_POST['location'];
-	$sql = "SELECT locker_number FROM locker WHERE building='$building' AND location='$location' GROUP BY locker_number";
+	$sql = "SELECT locker_number FROM locker WHERE building='$building' AND location='$location' AND status = 'empty' GROUP BY locker_number";
 	$user = $mysqli->query($sql);
 ?>
 
@@ -48,8 +48,7 @@
       <select class="selector" name="locker_number">
         <option value="" disabled selected>Locker Number</option>
         <?php
-  				while($locker_number = mysqli_fetch_assoc($user)){
-            if($locker_number['status'] == 'empty')
+  				if($locker_number = mysqli_fetch_assoc($user)){
               echo '<option value="'.$locker_number['locker_number'].'">'.$locker_number['locker_number'].'</option>';
           }
         ?>
