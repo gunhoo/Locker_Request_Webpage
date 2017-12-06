@@ -39,7 +39,8 @@
   </nav>
   <article>
     <h1>Locker Information</h1>
-    <form action="index.html" method="post" name="myForm">
+    <form action=".\location.php" method="post" name="myForm">
+      <input type="hidden" name="myUser_id" value="<?=$myUser_id?>">
       <select class="selector" name="building">
         <option value="" disabled selected>Building</option>
         <?php
@@ -48,21 +49,29 @@
           }
         ?>
       </select>
-      <select class="selector" name="location">
-        <option value="" disabled selected>Location</option>
-      </select>
-      <select class="selector" name="locker_number">
-        <option value="" disabled selected>Locker Number</option>
-      </select>
       <ul id="info_list">
         <li>Expiry Date</li>
         <li>Rental Fee</li>
         <li>Remittance Account</li>
-        <li class="info">2018-01-01</li>
-        <li class="info">5000 (원)</li>
-        <li class="info">우리 1002-443-492296</li>
+        <?php
+          if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
+            $building = $_GET['building'];
+            $location = $_GET['location'];
+            $locker_number = $_GET['locker_number'];
+            $sql2 = "SELECT * FROM locker WHERE building='$building' AND location='$location' AND locker_number='$locker_number'AND status='empty'";
+          	$user = $mysqli->query($sql2);
+            $locker = mysqli_fetch_assoc($user);
+            echo '<li class="info">'.$locker['expiry_date'].'</li>';
+            echo '<li class="info">'.$locker['rental_fee'].'</li>';
+            echo '<li class="info">'.$locker['remittance_account'].'</li>';
+          } else{
+            echo '<li class="info">정보없음</li>';
+            echo '<li class="info">정보없음</li>';
+            echo '<li class="info">정보없음</li>';
+          }
+         ?>
       </ul>
-      <input id="reqBtn" type="button" value="Request">
+      <input id="reqBtn" type="submit" value="Request">
     </form>
 
   </article>
