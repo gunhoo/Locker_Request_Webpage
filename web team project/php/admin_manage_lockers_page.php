@@ -40,7 +40,9 @@
   </nav>
   <article>
     <h1>Add New Lockers</h1>
-    <form action="index.html" method="post">
+
+
+    <form action="admin_manage_lockers_sub_page.html" method="post">
       <ul id="info_list">
         <li>Building</li>
         <li>Location</li>
@@ -66,24 +68,14 @@
         </li>
         <li><input class="addInfo" type="text" name="expiry_date" value="2010-11-01" placeholder="(일)"></li>
         <li><input class="addInfo" type="text" name="rental_fee" value="5000원" placeholder="(원)"></li>
-        <li><input class="addInfo" type="text" name="account" value="우리 1002-443-492296"></li>
+        <li><input class="addInfo " type="text" name="account" value="우리 1002-443-492296"></li>
       </ul>
-		<?php
-function btn1(){
-		#$sql = "INSERT INTO locker (locker_id, locker_number, building, location, expiry_date, rental_fee, remittance_account, user_id, status) VALUES(NULL,'1','1','1','1','1','1','1','1') ";
-		$sql = "INSERT INTO locker (locker_id, locker_number, building, location, expiry_date, rental_fee, remittance_account, user_id, status) VALUES(NULL,'2','$_POST[building]','$_POST[location]','$_POST[expiry_date]','$_POST[rental_fee]','$_POST[account]','$myAdmin_id','$_POST[col]') ";
-		 mysqli_query($mysqli, $sql);
-}
-
-	?>
 
 
-
-<input id="reqBtn" type="button" onClick = "<?php btn1(); ?>" value="Confirm">
-
+			<a href=".\admin_manage_lockers_sub_page.php?myAdmin_id=<?=$myAdmin_id?>">Check Loc4ker Info</a>
 
 
-
+<button id = "reqBtn"  type="submit" > Confirm</a></button>
 
 	   </form>
   </article>
