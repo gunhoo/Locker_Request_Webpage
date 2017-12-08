@@ -48,7 +48,7 @@
       <select class="selector" name="locker_number">
         <option value="" disabled selected>Locker Number</option>
         <?php
-  				if($locker_number = mysqli_fetch_assoc($user)){
+  				while($locker_number = mysqli_fetch_assoc($user)){
               echo '<option value="'.$locker_number['locker_number'].'">'.$locker_number['locker_number'].'</option>';
           }
         ?>
