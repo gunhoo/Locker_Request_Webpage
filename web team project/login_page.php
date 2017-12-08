@@ -1,5 +1,5 @@
 <?php
-  include "dbLogin.php";
+  include "..\php\dbLogin.php";
 
   if(isset($_GET['result'])){
     if($_GET['result'] == 'wrong'){
@@ -22,7 +22,7 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" type="text/css" href="../css/style_login.css">
+  <link rel="stylesheet" type="text/css" href=".\css\style_login.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
   </header>
   <article>
     <div class="title">Login</div>
-    <form action="./login_check.php" method="post">
+    <form action=".\php\login_check.php" method="post">
       <div id="loginDiv">
         <div id="info">
           <input type="text" name="id" placeholder="ID">
@@ -45,10 +45,10 @@
       </div>
     </form>
     <div id="register">
-      <form action="./user_register_page.php" method="post">
+      <form action=".\php\user_register_page.php" method="post">
         <input class="registerBtn" type="submit" value="User Register">
       </form>
-      <form action="./admin_register_page.php" method="post">
+      <form action=".\php\admin_register_page.php" method="post">
         <input class="registerBtn" id="adminRegisterBtn" type="submit" value="Admin Register">
       </form>
     </div>

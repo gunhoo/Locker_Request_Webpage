@@ -7,7 +7,7 @@
       header('Location: ./find_page.php');
       // Check whether ID or PW is empty
     } else if (($_POST['id'] == "") || ($_POST['password'] == "")){
-      header('Location: ./login_page.php?result=empty');
+      header('Location: ../login_page.php?result=empty');
       // Find User or Admin Info
     } else {
       $id = $_POST['id'];
@@ -25,14 +25,14 @@
       $result = $mysqli->query($sql);
       // Check whether ID exists
       if(!isset($result)){
-        header('Location: ./login_page.php?result=wrong');
+        header('Location: ../login_page.php?result=wrong');
       } else {
         $info = mysqli_fetch_assoc($result);
         // Check PW
         if($info['password']==$password){
           header($link);
         } else {
-          header('Location: ./login_page.php?result=wrong');
+          header('Location: ../login_page.php?result=wrong');
         }
       }
     }
