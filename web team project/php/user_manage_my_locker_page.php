@@ -1,7 +1,7 @@
 <?php
   $myUser_id = $_GET['myUser_id'];
   if($myUser_id ==""){
-    header('Location: ./login_page.php?result=no_id');
+    header('Location: ../login_page.php?result=no_id');
   }
  ?>
 

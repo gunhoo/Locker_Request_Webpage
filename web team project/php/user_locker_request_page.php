@@ -4,7 +4,7 @@
     header('Location: ./login_page.php?result=no_id');
   }
 	include "dbLogin.php";
-	$sql = "SELECT building FROM locker GROUP BY building";
+	$sql = "SELECT building FROM locker WHERE status = 'empty' GROUP BY building";
 	$user = $mysqli->query($sql);
 ?>
 
