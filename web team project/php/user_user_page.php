@@ -2,7 +2,7 @@
   include "dbLogin.php";
   $myUser_id = $_GET['myUser_id'];
   if($myUser_id ==""){
-    header('Location: ./login_page.php?result=no_id');
+    header('Location: ../login_page.php?result=no_id');
   }
   $sql = "SELECT* FROM user WHERE id Like '$myUser_id'";
   $result = mysqli_query($mysqli, $sql);
@@ -44,7 +44,7 @@
       </ul>
     </nav>
     <article>
-      <h1>My Locker Info</h1>
+      <h1>My Info</h1>
       <form action=".\modify.php?myUser_id=<?=$myUser_id?>" method="post">
         <ul id="info_list">
           <li><input class="info_list" type="password" name="password"  placeholder="Password"></li>

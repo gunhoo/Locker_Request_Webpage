@@ -20,7 +20,7 @@ body {
   margin-bottom: 5px;
 }
 #info input {
-    width: 200px;
+    width: 210px;
     padding: 9px;
     margin-bottom: 3px;
     margin-right: 300px;
@@ -36,8 +36,8 @@ body {
 #registerBtn {
   position: relative;
   font-weight: bold;
-  bottom: 86px;
-  height: 30px;
+  bottom: 70px;
+  height: 27px;
   left: 20px;
   width: 221px;
   padding: 3px;
@@ -45,9 +45,9 @@ body {
 #cancelBtn {
   position: relative;
   font-weight: bold;
-  bottom: 50px;
-  height: 30px;
-  right: 206px;
+  bottom: 39px;
+  height: 27px;
+  right: 205px;
   width: 221px;
   padding: 3px;
 }

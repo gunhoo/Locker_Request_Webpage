@@ -1,7 +1,7 @@
 <?php
   $myAdmin_id = $_POST['myAdmin_id'];
   if($myAdmin_id ==""){
-    header('Location: ./login_page.php?result=no_id');
+    header('Location: ../login_page.php?result=no_id');
   }
 	include "dbLogin.php";
   $building = $_POST['building'];

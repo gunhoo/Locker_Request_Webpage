@@ -2,7 +2,7 @@
 	include "dbLogin.php";
 	$myAdmin_id = $_GET['myAdmin_id'];
 	if($myAdmin_id ==""){
-		header('Location: ./login_page.php?result=no_id');
+		header('Location: ../login_page.php?result=no_id');
 	}
 
 	$sql = "SELECT building FROM locker GROUP BY building";
@@ -70,6 +70,7 @@
             echo '<li class="info">'.$locker['rental_fee'].'</li>';
             echo '<li class="info">'.$locker['remittance_account'].'</li>';
             echo '</ul>';
+						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp;|&nbsp; no. '.$locker_number.'&nbsp; Locker Info </li>';
           } else{
 
           }
@@ -88,7 +89,6 @@
       echo '<input type="hidden" name="building" value="'.$building.'">';
       echo '<input type="hidden" name="location" value="'.$location.'">';
       echo '<input type="hidden" name="locker_number" value="'.$locker_number.'">';
-      echo '<input id="reqBtn" href=".\admin_check_locker_info_page.php?myAdmin_id=<?=$myAdmin_id?>" type="button" value="Back">';
       echo '</ul>';
 
     }

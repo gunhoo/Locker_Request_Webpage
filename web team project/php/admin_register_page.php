@@ -43,7 +43,7 @@
         </div>
         <div>
           <button type="submit" id="registerBtn" name="action" value="admin register"> Register </button>
-          <button type="button" id="cancelBtn" name="cancelBtn" onClick="location.href='login_page.php'">Cancel</button>
+          <button type="button" id="cancelBtn" name="cancelBtn" onClick="location.href='../login_page.php'">Cancel</button>
         </div>
       </form>
     </article>

@@ -1,7 +1,7 @@
 <?php
   $myUser_id = $_GET['myUser_id'];
   if($myUser_id ==""){
-    header('Location: ./login_page.php?result=no_id');
+    header('Location: ../login_page.php?result=no_id');
   }
 	include "dbLogin.php";
 	$sql = "SELECT building FROM locker WHERE status = 'empty' GROUP BY building";
@@ -49,6 +49,7 @@
           }
         ?>
       </select>
+
       <ul id="info_list">
         <input id="chkBtn" type="submit" value="Check">
       </ul>
@@ -68,6 +69,8 @@
             echo '<li class="info">'.$locker['rental_fee'].'</li>';
             echo '<li class="info">'.$locker['remittance_account'].'</li>';
             echo '</ul>';
+            echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp;|&nbsp; no. '.$locker_number.'&nbsp; Locker Info </li>';
+
           } else{
 
           }
@@ -94,5 +97,4 @@
     ?>
   </article>
 </body>
-
 </html>

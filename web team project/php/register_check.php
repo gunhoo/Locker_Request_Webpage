@@ -33,16 +33,16 @@
 
         // Check whether ID, Student Number Alreay Exist
         if($password != $confirm){
-          header('Location: ./login_page.php?result=diff');
+          header('Location: ../login_page.php?result=diff');
           // 일치하는 ID or 학번 검색
         } else if(!$id_value['id'] && !$num_value['id']){
           $sql = "INSERT INTO user (id, password, name, phone_number, email, student_number)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number')";
           $result = $mysqli->query($sql);
-          header('Location: ./login_page.php?result=success');
+          header('Location: ../login_page.php?result=success');
         } else {
           //echo $id_result.', '.$num_result;
-          header('Location: ./user_register_page.php?result=exist');
+          header('Location: ../user_register_page.php?result=exist');
         }
 
 
@@ -65,9 +65,9 @@
           $sql = "INSERT INTO admin (id, password, name, phone_number, email, student_number, account)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number', '$account')";
           $result = $mysqli->query($sql);
-          header('Location: ./login_page.php?result=success');
+          header('Location: ../login_page.php?result=success');
         } else {
-          header('Location: ./admin_register_page.php?result=wrong');
+          header('Location: ../admin_register_page.php?result=wrong');
         }
       }
     }

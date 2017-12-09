@@ -20,6 +20,8 @@ header{
 
   background-color: #01579B;  /*개발자 모드*/
 }
+
+
 .menu {
   margin-right: 40px;
 
@@ -98,6 +100,14 @@ article h1{
   bottom: 150px;
   padding: 8px;
   font-size: 15px;
+}
+
+.title_info{
+  position:relative;
+  list-style: none;
+  left: 50px;
+  bottom: 250px;
+font-size: 30px;
 }
 #reqBtn2 {
   position: relative;

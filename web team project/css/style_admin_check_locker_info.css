@@ -47,6 +47,7 @@ ul {
   width: 100px;
   height: 30px;
   margin: 5px;
+  font-size: 12px;
 }
 .sub_menu{
   border-right: 1px solid;
@@ -88,6 +89,13 @@ article h1{
   margin-top: 30px;
   padding-left: 0;
 }
+.title_info{
+  position:relative;
+  list-style: none;
+  left: 50px;
+  bottom: 250px;
+font-size: 30px;
+}
 #info_list li {
   margin: 5px;
   padding: 3px;
@@ -99,6 +107,8 @@ article h1{
   border: 1px solid;
   width: 200px;
 }
+
+
 #reqBtn {
   position: relative;
   left: 378px;
@@ -133,6 +143,8 @@ article h1{
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
 }
+
+
 #bank_field {
   width: 70px;
   height: 21px;

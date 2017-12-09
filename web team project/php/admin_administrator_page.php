@@ -2,7 +2,7 @@
     include "dbLogin.php";
     $myAdmin_id = $_GET['myAdmin_id'];
     if($myAdmin_id ==""){
-      header('Location: ./login_page.php?result=no_id');
+      header('Location: ../login_page.php?result=no_id');
     }
 
     $sql = "SELECT* FROM admin WHERE id Like '$myAdmin_id'";
