@@ -61,7 +61,7 @@
           header('Location: ./login_page.php?result=diff');
           // 일치하는 ID or 학번 검색
         } else if(!$id_value['id'] && !$num_value['id']){
-          $account = $_POST['account'];
+          $account = $_POST['account_number'];
           $sql = "INSERT INTO admin (id, password, name, phone_number, email, student_number, account)";
           $sql = $sql."VALUES('$id','$password','$name','$phone_number', '$email', '$student_number', '$account')";
           $result = $mysqli->query($sql);
