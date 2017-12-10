@@ -6,6 +6,13 @@
 	include "dbLogin.php";
 	$sql = "SELECT building FROM locker WHERE status = 'empty' GROUP BY building";
 	$user = $mysqli->query($sql);
+  if(isset($_GET['result'])){
+		if($_GET['result'] == 'requested'){
+			echo '<script>alert("사물함이 신청되었습니다. 입금 확인 시 사물함 등록이 완료됩니다.")</script>';
+		} else if($_GET['result'] == 'exist'){
+			echo '<script>alert("이미 사물함을 신청하셨습니다.")</script>';
+		}
+	}
 ?>
 
 <!DOCTYPE html>

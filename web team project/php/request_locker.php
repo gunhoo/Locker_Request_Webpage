@@ -11,10 +11,10 @@
     $sql = "UPDATE locker SET status = 'ready', user_id='$myUser_id'
       WHERE building = '$building' AND location = '$location' AND locker_number = '$locker_number'";
     $mysqli->query($sql);
+		header('Location: ./user_locker_request_page.php?myUser_id='.$myUser_id.'&result=requested');
   }
   else{//존재하면
-    echo "<script>alert(\"이미 신청하셨습니다.\");</script>";
+    header('Location: ./user_locker_request_page.php?myUser_id='.$myUser_id.'&result=exist');
   }
 
-  header('Location: ./user_locker_request_page.php?myUser_id='.$myUser_id);
  ?>
