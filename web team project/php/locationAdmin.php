@@ -40,7 +40,7 @@
   </nav>
   <article>
     <h1>Check Locker Info</h1>
-    <form action=".\locker_number_Admin.php" method="post" name="myForm">
+    <form action=".\admin_check_locker_info_page.php" method="GET" name="myForm">
       <input type="hidden" name="building" value="<?=$building?>">
       <input type="hidden" name="myAdmin_id" value="<?=$myAdmin_id?>">
       <select class="selector" name="location">

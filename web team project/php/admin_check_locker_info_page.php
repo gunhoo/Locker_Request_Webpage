@@ -7,7 +7,15 @@
 
 	$sql = "SELECT building FROM locker GROUP BY building";
 	$user = $mysqli->query($sql);
-
+	if(isset($_GET['result'])){
+		if($_GET['result'] == 'modify'){
+			echo '<script>alert("사물함 정보가 수정되었습니다.")</script>';
+		} else if($_GET['result'] == 'delete'){
+			echo '<script>alert("사물함 삭제가 완료되었습니다.")</script>';
+		} else if($_GET['result'] == 'exist'){
+			echo '<script>alert("삭제 실패: 사물함을 사용하는 유저가 존재합니다.")</script>';
+		}
+	}
 ?>
 
 <html>
@@ -54,45 +62,45 @@
       <ul id="info_list">
 				<input id="chkBtn" type="submit" value="Check">
       </ul>
+ 	</form>
       <?php
-        if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
-    echo  '<ul id="info_list">
-        <li>Expiry Date</li>
-        <li>Rental Fee</li>
-        <li>Remittance Account</li>';
+        if(isset($_GET['building']) && isset($_GET['location'])){
+		    	echo  '<ul id="info_list">
+						<li>Locker number</li>
+		        <li>Expiry Date</li>
+		        <li>Rental Fee</li>
+		        <li>Remittance Account</li>';
             $building = $_GET['building'];
             $location = $_GET['location'];
-            $locker_number = $_GET['locker_number'];
-            $sql2 = "SELECT * FROM locker WHERE building='$building' AND location='$location' AND locker_number='$locker_number'";
-          	$user = $mysqli->query($sql2);
-            $locker = mysqli_fetch_assoc($user);
-            echo '<li class="info">'.$locker['expiry_date'].'</li>';
-            echo '<li class="info">'.$locker['rental_fee'].'</li>';
-            echo '<li class="info">'.$locker['remittance_account'].'</li>';
+
+						$sql2 = "SELECT expiry_date, rental_fee, remittance_account
+						 FROM locker WHERE building='$building' AND location='$location'";
+          	$user2 = $mysqli->query($sql2);
+            $lockerCount = mysqli_fetch_assoc($user2);
+						$expiry_date = $lockerCount['expiry_date'];
+						$rental_fee = $lockerCount['rental_fee'];
+						$remittance_account = $lockerCount['remittance_account'];
+
+            $sql2 = "SELECT building, location, count(location) as locker_count
+						 FROM locker WHERE building='$building' AND location='$location' GROUP BY location";
+          	$user2 = $mysqli->query($sql2);
+            $locker= mysqli_fetch_assoc($user2);
+
+						echo '<form action=".\modify_locker.php" method="POST" name="myForm">';
+						echo '<input type="hidden" name="myAdmin_id" value="'.$myAdmin_id.'">';
+			      echo '<input type="hidden" name="building" value="'.$building.'">';
+			      echo '<input type="hidden" name="location" value="'.$location.'">';
+						echo '<li class="info">'.$locker['locker_count'].'</li>';
+            echo '<li class="info"> <input  type=text name = expiry_date value='.$expiry_date.'></li>';
+            echo '<li class="info"> <input  type=text name = rental_fee value='.$rental_fee.'></li>';
+            echo '<li class="info"> <input  type=text name = remittance_account value='.$remittance_account.'></li>';
             echo '</ul>';
-						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp;|&nbsp; no. '.$locker_number.'&nbsp; Locker Info </li>';
-          } else{
-
-          }
+						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp; Locker Info </li>';
+						echo '<input id="modifyBtn" type="submit" name="action" value="modify">';
+						echo '<input id="deleteBtn" type="submit" name="action" value="delete">';
+						echo '</form>';
+					}
          ?>
-
-    </form>
-
-    <?php
-    if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
-      $building = $_GET['building'];
-      $location = $_GET['location'];
-      $locker_number = $_GET['locker_number'];
-      $myAdmin_id = $_GET['myAdmin_id'];
-      echo '<ul id="info_list">';
-      echo '<input type="hidden" name="myAdmin_id" value="'.$myAdmin_id.'">';
-      echo '<input type="hidden" name="building" value="'.$building.'">';
-      echo '<input type="hidden" name="location" value="'.$location.'">';
-      echo '<input type="hidden" name="locker_number" value="'.$locker_number.'">';
-      echo '</ul>';
-
-    }
-    ?>
   </article>
 </body>
 </html>
