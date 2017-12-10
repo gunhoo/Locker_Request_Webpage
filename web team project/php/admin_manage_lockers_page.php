@@ -59,16 +59,20 @@
         <li> <input class = "addInfo" type="text" name="location" placeholder="Location"></li>
         <li class="addInfo">
           <select name="row" value = "1">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" >4</option>
+						<option value="1" selected>1</option>
+						<?php
+							$i = 1;
+							while ($i < 5)
+								echo '<option value='.($i+1).'>'.(($i++)+1).'</option>';
+						 ?>
           </select> x
           <select name="col" value ="1">
             <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3" >3</option>
-            <option value="4">4</option>
+						<?php
+							$i = 1;
+							while ($i < 15)
+								echo '<option value='.($i+1).'>'.(($i++)+1).'</option>';
+						 ?>
           </select>
         </li>
         <li><input class="addInfo" type="text" name="expiry_date" value="2010-11-01" placeholder="(일)"></li>
