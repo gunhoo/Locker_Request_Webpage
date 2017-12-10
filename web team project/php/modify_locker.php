@@ -18,7 +18,7 @@
       $link = 'Location:./admin_check_locker_info_page.php?myAdmin_id='.$id.'&result=modify';
     } else if($_POST['action'] == "delete"){
       // 사물함에 유저가 존재하는지 검색
-      $sql = "SELECT * FROM locker WHERE user_id IS NOT NULL";
+      $sql = "SELECT * FROM locker WHERE building ='$building' AND location='$location' AND user_id IS NOT NULL";
       $result = $mysqli->query($sql);
       $user = mysqli_fetch_assoc($result);
 
