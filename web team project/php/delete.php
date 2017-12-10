@@ -23,7 +23,7 @@
     } else {
       $sql2 = "DELETE FROM $table WHERE id = '$id'";
       $result2 = $mysqli->query($sql2);
-      header('Location: ./login_page.php?result=delete');
+      header('Location: ../login_page.php?result=delete');
     }
   }
   ?>
