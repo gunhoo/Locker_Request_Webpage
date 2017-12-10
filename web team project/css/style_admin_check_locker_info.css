@@ -92,8 +92,8 @@ article h1{
 .title_info{
   position:relative;
   list-style: none;
-  left: 50px;
-  bottom: 250px;
+  left: 20px;
+  bottom: 350px;
 font-size: 30px;
 }
 #info_list li {
@@ -103,11 +103,12 @@ font-size: 30px;
 .info {
   position:relative;
   left: 155px;
-  bottom: 98px;
-  border: 1px solid;
+  bottom: 130px;
   width: 200px;
 }
-
+.info input {
+  padding: 2px;
+}
 
 #reqBtn {
   position: relative;

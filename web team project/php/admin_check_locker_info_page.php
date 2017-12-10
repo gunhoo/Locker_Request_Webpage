@@ -57,25 +57,36 @@
       <?php
         if(isset($_GET['building']) && isset($_GET['location']) && isset($_GET['locker_number'])){
     echo  '<ul id="info_list">
+				<li>Locker number</li>
         <li>Expiry Date</li>
         <li>Rental Fee</li>
         <li>Remittance Account</li>';
             $building = $_GET['building'];
             $location = $_GET['location'];
-            $locker_number = $_GET['locker_number'];
-            $sql2 = "SELECT * FROM locker WHERE building='$building' AND location='$location' AND locker_number='$locker_number'";
-          	$user = $mysqli->query($sql2);
-            $locker = mysqli_fetch_assoc($user);
-            echo '<li class="info">'.$locker['expiry_date'].'</li>';
-            echo '<li class="info">'.$locker['rental_fee'].'</li>';
-            echo '<li class="info">'.$locker['remittance_account'].'</li>';
+
+						$sql2 = "SELECT expiry_date, rental_fee, remittance_account
+						 FROM locker WHERE building='$building' AND location='$location'";
+          	$user2 = $mysqli->query($sql2);
+            $lockerCount = mysqli_fetch_assoc($user2);
+						$expiry_date = $lockerCount['expiry_date'];
+						$rental_fee = $lockerCount['rental_fee'];
+						$remittance_account = $lockerCount['remittance_account'];
+
+            $sql2 = "SELECT building, location, count(location) as locker_count
+						 FROM locker WHERE building='$building' AND location='$location' GROUP BY location";
+          	$user2 = $mysqli->query($sql2);
+            $locker= mysqli_fetch_assoc($user2);
+
+						echo '<li class="info">'.$locker['locker_count'].'</li>';
+            echo '<li class="info"> <input  type=text name = expiry_date placeholder='.$expiry_date.'></li>';
+            echo '<li class="info"> <input  type=text name = rental_fee placeholder='.$rental_fee.'></li>';
+            echo '<li class="info"> <input  type=text name = remittance_account placeholder='.$remittance_account.'></li>';
             echo '</ul>';
-						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp;|&nbsp; no. '.$locker_number.'&nbsp; Locker Info </li>';
+						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp; Locker Info </li>';
           } else{
 
           }
          ?>
-
     </form>
 
     <?php
@@ -90,7 +101,6 @@
       echo '<input type="hidden" name="location" value="'.$location.'">';
       echo '<input type="hidden" name="locker_number" value="'.$locker_number.'">';
       echo '</ul>';
-
     }
     ?>
   </article>
