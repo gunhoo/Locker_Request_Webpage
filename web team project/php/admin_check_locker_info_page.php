@@ -96,8 +96,8 @@
             echo '<li class="info"> <input  type=text name = remittance_account value='.$remittance_account.'></li>';
             echo '</ul>';
 						echo '<li class="title_info">'.$building.'&nbsp;&nbsp;|&nbsp;&nbsp;'.$location.'&nbsp;&nbsp; Locker Info </li>';
-						echo '<input id="modifyBtn" type="submit" name="action" value="modify">';
-						echo '<input id="deleteBtn" type="submit" name="action" value="delete">';
+						echo '<input class="modifyBtn" type="submit" name="action" value="modify">';
+						echo '<input class="modifyBtn" type="submit" name="action" value="delete">';
 						echo '</form>';
 					}
          ?>

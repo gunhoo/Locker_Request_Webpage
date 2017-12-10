@@ -191,3 +191,9 @@ font-size: 30px;
   width: 100px;
   height: 30px;
 }
+.modifyBtn {
+  position: relative;
+  bottom: 170px;
+  left:224px;
+  padding: 8px;
+}
