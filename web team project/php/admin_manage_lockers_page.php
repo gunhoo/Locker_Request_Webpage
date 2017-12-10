@@ -4,7 +4,11 @@
 	if($myAdmin_id ==""){
 		header('Location: ../login_page.php?result=no_id');
 	}
-
+	if(isset($_GET['result'])){
+		if($_GET['result'] == 'added'){
+			echo '<script>alert("사물함이 추가되었습니다.")</script>';
+		}
+	}
 
 ?>
 

@@ -16,6 +16,6 @@
 		$sql = "INSERT INTO locker (locker_id, locker_number, building, location, expiry_date, rental_fee, remittance_account, user_id, status) VALUES(NULL,'$i'+1,'$_GET[building]','$_GET[location]','$_GET[expiry_date]','$_GET[rental_fee]','$_GET[account]',NULL,'empty') ";
   mysqli_query($mysqli, $sql);
 }
-  header('Location: ./admin_manage_lockers_page.php?myAdmin_id='.$myAdmin_id);
+  header('Location: ./admin_manage_lockers_page.php?myAdmin_id='.$myAdmin_id.'&result=added');
 
 ?>
