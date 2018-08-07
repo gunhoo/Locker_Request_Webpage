@@ -1,3 +1,6 @@
+MIT License
+
+Copyright (c) 2018 Gunhoo Park
 # web_programming
 
 CAUCSE 2017-fall web programming team project
